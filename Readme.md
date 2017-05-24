@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Илья Ганжа](https://up.htmlacademy.ru/adaptive/11/user/177675).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Фарига](https://up.htmlacademy.ru/adaptive/11/user/6090).
 
 ---
 
