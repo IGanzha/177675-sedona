@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Седона: Форма обратной связи</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="#">
+</head>
+<body>
+	<header class="page-header">
+        <nav class="header-nav">
+            <ul class="header-nav__list">
+                <li class="header-nav__item"> <a class="header-nav__link">Главная</a></li>
+                <li class="header-nav__item"> <a class="header-nav__link" href="photo.html">Фото и видео</a></li>
+                <li class="header-nav__item"> <a class="header-nav__link">Форма отзыва</a></li>
+                <li class="header-nav__item"> <a class="header-nav__link" href="#">HTML ACADEMY</a></li>
+    		</ul>
+    		<div class="logo-block">
+    			<a class="header-nav__logo-link" href="index.html">
+    				<img class="logo-img" src="#" alt="Sedona-logo" width="" height="">
+    			</a>
+    		</div>
+    	</nav>
+    </header>
+
+	<section class="welcome-block--short">
+		<h1>Sedona</h1>
+	</section>
+
+	<form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
+		<p class="form-title">Оставьте свой отзыв </p>
+		<p class="form-text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях </p>
+		<fieldset class="name-field">
+			<label for="first-name"> Имя*:
+				<input type="text" id="first-name" name="first-name">
+			</label>
+			
+			<label for="last-name"> Фамилия*:
+				<input type="text" id="last-name" name="last-name">
+			</label>
+
+			<label for="middle-name"> Отчество:
+				<input type="text" id="middle-name" name="middle-name">
+			</label>
+		</fieldset>
+
+		<fieldset class="contacts-field">
+			<p class="form-title">Контактная информация:</p>
+			<label for="tel"> Контактный телефон*:
+				<input type="tel" id="tel" name="tel" placeholder="Введите телефон">
+			</label>
+			<label for="email"> Электронная почта*:
+				<input type="email" id="email" name="email" placeholder="Введите e-mail">
+			</label>
+		</fieldset>
+
+		<fieldset class="inpression-field">
+			<p class="form-title">Ваше общее впечатление:</p>
+			<label for="good-imp">
+				<input type="radio" name="impression" id="good-imp" value="good-imp">
+				<span class="checkbox_indicator"></span> Скорее положительное
+			</label>
+			<label for="bad-imp">
+				<input type="radio" name="impression" id="bad-imp" value="bad-imp">
+				<span class="checkbox_indicator"></span> Скорее отрицательное
+			</label>
+			<label for="neutral-imp">
+				<input type="radio" name="impression" id="neutral-imp" value="neutral-imp">
+				<span class="checkbox_indicator"></span> Затрудняюсь ответить
+			</label>	
+		</fieldset>
+
+		<fieldset class="visited-places-field">
+			<p class="form-title">Посещенные достопримечательности:</p>
+			<label for="devil-bridge">
+				<input type="checkbox" name="The devil's bridge" id="devil-bridge">
+				<span class="checkbox_indicator"></span> Мост Дьявола
+			</label>
+			<label for="slide-park">
+				<input type="checkbox" name="slide-park" id="slide-park">
+				<span class="checkbox_indicator"></span> Слайд-парк
+			</label>
+			<label for="bell-tower">
+				<input type="checkbox" name="bell-tower" id="bell-tower">
+				<span class="checkbox_indicator"></span> Гора-колокол
+			</label>
+			<label for="red_rocks">
+				<input type="checkbox" name="red_rocks" id="red_rocks">
+				<span class="checkbox_indicator"></span> Красные скалы
+			</label>
+		</fieldset>
+
+		<fieldset class="impression-desc-field">
+			<p class="form-title">Опишите свои эмоции:</p>
+			<textarea name="impression-desc" id="#" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
+		</fieldset>
+		<input type="submit" class="btn btn--send-fdb" value="Отправить отзыв">
+	</form>
+
+
+	<footer class="page-footer">
+		<p class="footer-tag"> <a href="#" class="footer-tag-link">#visitsedona</a></p>
+
+		<ul class="social">
+			<li class="social-item">
+				<a href="#" class="social-link social-link--twitter">Мы в Twitter</a>
+			</li>
+			<li class="social-item">
+				<a href="#" class="social-link social-link--facebook">Мы в Facebook</a>
+			</li>
+			<li class="social-item">
+				<a href="#" class="social-link social-link--youtube">Мы в Youtube</a>
+			</li>
+		</ul>
+
+		<div class="copyright">
+			<a href="#" class="copyright__link">Разработано
+				<img src="#" alt="" class="HTMLAcademy-img">
+			</a>
+		</div>
+	</footer>
+<script src="#"></script>
+</body>
+</html>
