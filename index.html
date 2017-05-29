@@ -3,10 +3,122 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="#">
   </head>
   <body>
+    <header class="page-header">
+        <nav class="header-nav">
+            <ul class="header-nav__list">
+                <li class="header-nav__item"> <a class="header-nav__link">Главная</a></li>
+                <li class="header-nav__item"> <a class="header-nav__link" href="photo.html">Фото и видео</a></li>
+                <li class="header-nav__item"> <a class="header-nav__link" href="form.html">Форма отзыва</a></li>
+                <li class="header-nav__item"> <a class="header-nav__link" href="#">HTML ACADEMY</a></li>
+    		</ul>
+    	</nav>
+    	<button class="nav-btn" type="button">Меню</button>
+   		<div class="logo-block">
+   			<a class="header-nav__logo-link">
+   				<img class="logo-img" src="#" alt="Sedona-logo" width="" height="">
+    		</a>
+    	</div>
+    </header>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+    <section class="welcome-block">
+    	<p class="welcome-block__p-one">Welcome <br>
+    	<span>to the gorgeous</span></p>
+    	<h1>Sedona</h1>
+    	<p class="welcome-block__p-two">"Because the Grand Canyon sucks!"</p>
+    </section>
 
+    <div class="intro">
+	   	<p class="welcome-block__p-three">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+	    <p class="features-intro">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон"</p>    	
+    </div>
+
+    <main>
+		<section class="features features-one">
+			<h2 class="features__title">Настоящий городок</h2>
+	    	<span class="features__number">№1</span>
+	   		<p class="features__desc">Седона не аттракцион для туристов, там течет своя жизнь</p>
+	   		<div class="features__img features__img--feat1"></div>
+		</section>
+
+		<section class="sub-features">
+			<div class="sub-features__lodging">
+				<p class="features__title features__title--invert">Жилье</p>
+    			<p class="features__desc features__desc--invert">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+			</div>
+
+			<div class="sub-features__food">
+				<p class="features__title features__title--invert">Сувениры</p>
+    			<p class="features__desc features__desc--invert">Не только китайского, но и местного производства!</p>
+			</div>
+
+			<div class="sub-features__souvenirs">
+				<p class="features__title features__title--invert">Еда</p>
+    			<p class="features__desc features__desc--invert">Всегда заказывайте фирменные бургеры, Вы не разочаруетесь!</p>
+			</div>
+		</section>
+
+		<section class="features features-two">
+			<div class="features__img features__img--feat2"></div>
+			<h2 class="features__title">Там есть мост дьявола</h2>
+	    	<span class="features__number">№2</span>
+	    	<p class="features__desc">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
+		</section>
+
+		<section class="other-features">
+			<div class="other-features__item">
+				<h2 class="features__title features__title--invert">Небольшая площадь</h2>
+	    		<span class="features__number features__number--invert">№3</span>
+	    		<p class="features__desc features__desc--invert">Все интересные места находятся очень близко</p>
+			</div>
+
+			<div class="other-features__item">
+				<h2 class="features__title features__title--invert">Красивая дорога</h2>
+	    		<span class="features__number features__number--invert">№4</span>
+	    		<p class="features__desc features__desc--invert">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+			</div>
+				
+			<div class="other-features__item">
+				<h2 class="features__title features__title--invert">Мало туристов</h2>
+	    		<span class="features__number features__number--invert">№5</span>
+	    		<p class="features__desc features__desc--invert">Большинство едет в Гранд Каньон и толпится там</p>
+			</div>
+		</section>
+    </main>
+
+ 	<section class="booking-block">
+ 		<p class="booking-block__question">Зантересовались?</p>
+ 		<p class="booking-block__desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+ 		<a href="#" class="btn btn--find-hotel">Найти гостиницу</a>
+ 	</section>
+
+	<section class="map">
+		<img src="#" alt="Карта Аризоны" class="map__img">
+	</section>
+
+	<footer class="page-footer">
+		<p class="page-footer__tag"><a href="#" class="page-footer__link">#visitsedona</a></p>
+		<ul class="social">
+			<li class="social__item">
+				<a href="#" class="social-link social-link--twitter">Мы в Twitter</a>
+			</li>
+			<li class="social__item">
+				<a href="#" class="social-link social-link--facebook">Мы в Facebook</a>
+			</li>
+			<li class="social__item">
+				<a href="#" class="social-link social-link--youtube">Мы в Youtube</a>
+			</li>
+		</ul>
+
+		<div class="page-footer__copyright">
+			<a href="#" class="copyright__link">Разработано
+				<span>HTML Academy_logo</span>	<!-- Этого достаточно, правильно я понял? Текст обнулим, на бэкграунд картинку, по ховеру и нажатию менять координаты?  -->
+			</a>
+		</div>
+	</footer>
+	<script src="#"></script>
   </body>
 </html>
