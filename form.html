@@ -12,110 +12,128 @@
             <ul class="header-nav__list">
                 <li class="header-nav__item"> <a class="header-nav__link">Главная</a></li>
                 <li class="header-nav__item"> <a class="header-nav__link" href="photo.html">Фото и видео</a></li>
-                <li class="header-nav__item"> <a class="header-nav__link">Форма отзыва</a></li>
+                <li class="header-nav__item"> <a class="header-nav__link" href="form.html">Форма отзыва</a></li>
                 <li class="header-nav__item"> <a class="header-nav__link" href="#">HTML ACADEMY</a></li>
     		</ul>
-    		<div class="logo-block">
-    			<a class="header-nav__logo-link" href="index.html">
-    				<img class="logo-img" src="#" alt="Sedona-logo" width="" height="">
-    			</a>
-    		</div>
     	</nav>
+    	<button class="nav-btn" type="button">Меню</button>
+   		<div class="logo-block">
+   			<a class="header-nav__logo-link">
+   				<img class="logo-img" src="#" alt="Sedona-logo" width="" height="">
+    		</a>
+    	</div>
     </header>
 
-	<section class="welcome-block--short">
-		<h1>Sedona</h1>
+	<section class="welcome-block welcome-block--short">
+	<!-- можно модификатор блоку задать или только элементу блока? -->
+		<div class="welcome-block__img-block welcome-block__img-block--short">
+			<h1>Sedona</h1>
+		</div>
 	</section>
 
+	<section class="content-block content-block--figured">
+		<p class="content-block __title">Оставьте свой отзыв </p>
+		<p class="content-block __text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях </p>
+	</section>
+	
 	<form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
-		<p class="form-title">Оставьте свой отзыв </p>
-		<p class="form-text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях </p>
-		<fieldset class="name-field">
-			<label for="first-name"> Имя*:
-				<input type="text" id="first-name" name="first-name">
-			</label>
-			
-			<label for="last-name"> Фамилия*:
-				<input type="text" id="last-name" name="last-name">
+		<fieldset class="feedback-form__field">
+			<p class="feedback-form__title">Представьтесь:</p> 
+			<label for="first-name" class="feedback-form__label"><span class="feedback-form__label-text">Имя*:</span>
+				<input type="text" class="feedback-form__input" id="first-name" name="first-name" >
 			</label>
 
-			<label for="middle-name"> Отчество:
-				<input type="text" id="middle-name" name="middle-name">
+			<label for="last-name" class="feedback-form__label"><span class="feedback-form__label-text"> Фамилия*:</span>
+				<input  type="text" class="feedback-form__input" id="last-name" name="last-name">
+			</label>
+
+			<label for="middle-name" class="feedback-form__label"><span class="feedback-form__label-text">Отчество:</span>
+				<input type="text" class="feedback-form__input" id="middle-name" name="middle-name">
 			</label>
 		</fieldset>
 
-		<fieldset class="contacts-field">
-			<p class="form-title">Контактная информация:</p>
-			<label for="tel"> Контактный телефон*:
-				<input type="tel" id="tel" name="tel" placeholder="Введите телефон">
+		<fieldset class="feedback-form__field">
+			<p class="feedback-form__title">Контактная информация:</p>
+
+<!-- сделал в таком варианте. пока не понимаю для чего нужен оберточный span для инпута. 
+	нельзя добавить всевдоэлемент инпуту и вставить в него картинку?-->
+
+			<label for="tel" class="feedback-form__label"><span class="feedback-form__label-text">Контактный телефон*:</span>
+				<span class="feedback-form__inp-wrapper">
+					<input type="tel" class="feedback-form__input" id="tel" name="tel" placeholder="Введите телефон">
+					<span class="feedback-form__icon feedback-form__icon--tel"></span>
+				</span>
 			</label>
-			<label for="email"> Электронная почта*:
-				<input type="email" id="email" name="email" placeholder="Введите e-mail">
+
+			<label for="email" class="feedback-form__label"> <span class="feedback-form__label-text">Электронная почта*:</span>
+				<span class="feedback-form__inp-wrapper">
+					<input type="email" class="feedback-form__input" id="email" name="email" placeholder="Введите e-mail">
+					<span class="feedback-form__icon feedback-form__icon--email"></span>
+				</span>
 			</label>
 		</fieldset>
 
-		<fieldset class="inpression-field">
-			<p class="form-title">Ваше общее впечатление:</p>
-			<label for="good-imp">
-				<input type="radio" name="impression" id="good-imp" value="good-imp">
+		<fieldset class="feedback-form__field">
+			<p class="feedback-form__title">Ваше общее впечатление:</p>
+			<label for="good-imp" class="feedback-form__label">
+				<input type="radio" class="feedback-form__input" name="impression" id="good-imp" value="good-imp">
 				<span class="checkbox_indicator"></span> Скорее положительное
 			</label>
-			<label for="bad-imp">
-				<input type="radio" name="impression" id="bad-imp" value="bad-imp">
+			<label for="bad-imp" class="feedback-form__label">
+				<input type="radio" class="feedback-form__input" name="impression" id="bad-imp" value="bad-imp">
 				<span class="checkbox_indicator"></span> Скорее отрицательное
 			</label>
-			<label for="neutral-imp">
-				<input type="radio" name="impression" id="neutral-imp" value="neutral-imp">
+			<label for="neutral-imp" class="feedback-form__label">
+				<input type="radio" class="feedback-form__input" name="impression" id="neutral-imp" value="neutral-imp">
 				<span class="checkbox_indicator"></span> Затрудняюсь ответить
-			</label>	
+			</label>
 		</fieldset>
 
-		<fieldset class="visited-places-field">
-			<p class="form-title">Посещенные достопримечательности:</p>
-			<label for="devil-bridge">
-				<input type="checkbox" name="The devil's bridge" id="devil-bridge">
+		<fieldset class="feedback-form__field">
+			<p class="feedback-form__title">Посещенные достопримечательности:</p>
+			<label for="devil-bridge" class="feedback-form__label">
+				<input type="checkbox" class="feedback-form__input" name="The devil's bridge" id="devil-bridge">
 				<span class="checkbox_indicator"></span> Мост Дьявола
 			</label>
-			<label for="slide-park">
-				<input type="checkbox" name="slide-park" id="slide-park">
+			<label for="slide-park" class="feedback-form__label">
+				<input type="checkbox" class="feedback-form__input" name="slide-park" id="slide-park">
 				<span class="checkbox_indicator"></span> Слайд-парк
 			</label>
-			<label for="bell-tower">
-				<input type="checkbox" name="bell-tower" id="bell-tower">
+			<label for="bell-tower" class="feedback-form__label">
+				<input type="checkbox" class="feedback-form__input" name="bell-tower" id="bell-tower">
 				<span class="checkbox_indicator"></span> Гора-колокол
 			</label>
-			<label for="red_rocks">
-				<input type="checkbox" name="red_rocks" id="red_rocks">
+			<label for="red_rocks" class="feedback-form__label">
+				<input type="checkbox" class="feedback-form__input" name="red_rocks" id="red_rocks">
 				<span class="checkbox_indicator"></span> Красные скалы
 			</label>
 		</fieldset>
 
-		<fieldset class="impression-desc-field">
-			<p class="form-title">Опишите свои эмоции:</p>
-			<textarea name="impression-desc" id="#" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
+		<fieldset class="feedback-form__field">
+			<p class="feedback-form__title">Опишите свои эмоции:</p>
+			<textarea name="impression-desc" class="feedback-form__input feedback-form__textarea" id="#" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
 		</fieldset>
 		<input type="submit" class="btn btn--send-fdb" value="Отправить отзыв">
 	</form>
 
 
 	<footer class="page-footer">
-		<p class="footer-tag"> <a href="#" class="footer-tag-link">#visitsedona</a></p>
-
+		<p class="page-footer__tag"><a href="#" class="page-footer__link">#visitsedona</a></p>
 		<ul class="social">
-			<li class="social-item">
+			<li class="social__item">
 				<a href="#" class="social-link social-link--twitter">Мы в Twitter</a>
 			</li>
-			<li class="social-item">
+			<li class="social__item">
 				<a href="#" class="social-link social-link--facebook">Мы в Facebook</a>
 			</li>
-			<li class="social-item">
+			<li class="social__item">
 				<a href="#" class="social-link social-link--youtube">Мы в Youtube</a>
 			</li>
 		</ul>
 
-		<div class="copyright">
+		<div class="page-footer__copyright">
 			<a href="#" class="copyright__link">Разработано
-				<img src="#" alt="" class="HTMLAcademy-img">
+				<span>HTML Academy_logo</span>
 			</a>
 		</div>
 	</footer>
