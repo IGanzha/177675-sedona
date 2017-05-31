@@ -25,20 +25,17 @@
     </header>
 
 	<section class="welcome-block welcome-block--short">
-	<!-- можно модификатор блоку задать или только элементу блока? -->
-		<div class="welcome-block__img-block welcome-block__img-block--short">
 			<h1>Sedona</h1>
-		</div>
 	</section>
 
 	<section class="content-block content-block--figured">
-		<p class="content-block __title">Оставьте свой отзыв </p>
-		<p class="content-block __text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях </p>
+		<p class="content-block__title">Оставьте свой отзыв </p>
+		<p class="content-block__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях </p>
 	</section>
-	
+
 	<form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
 		<fieldset class="feedback-form__field">
-			<p class="feedback-form__title">Представьтесь:</p> 
+			<p class="feedback-form__title">Представьтесь:</p>
 			<label for="first-name" class="feedback-form__label"><span class="feedback-form__label-text">Имя*:</span>
 				<input type="text" class="feedback-form__input" id="first-name" name="first-name" >
 			</label>
@@ -54,21 +51,17 @@
 
 		<fieldset class="feedback-form__field">
 			<p class="feedback-form__title">Контактная информация:</p>
-
-<!-- сделал в таком варианте. пока не понимаю для чего нужен оберточный span для инпута. 
-	нельзя добавить всевдоэлемент инпуту и вставить в него картинку?-->
-
 			<label for="tel" class="feedback-form__label"><span class="feedback-form__label-text">Контактный телефон*:</span>
-				<span class="feedback-form__inp-wrapper">
+				<span class="feedback-form__input-wrap">
 					<input type="tel" class="feedback-form__input" id="tel" name="tel" placeholder="Введите телефон">
-					<span class="feedback-form__icon feedback-form__icon--tel"></span>
+					<span class="feedback-form__icon feedback-form__icon--tel">Иконка телефона</span>
 				</span>
 			</label>
 
 			<label for="email" class="feedback-form__label"> <span class="feedback-form__label-text">Электронная почта*:</span>
-				<span class="feedback-form__inp-wrapper">
+				<span class="feedback-form__input-wrap">
 					<input type="email" class="feedback-form__input" id="email" name="email" placeholder="Введите e-mail">
-					<span class="feedback-form__icon feedback-form__icon--email"></span>
+					<span class="feedback-form__icon feedback-form__icon--email">Иконка письма</span>
 				</span>
 			</label>
 		</fieldset>
@@ -113,7 +106,7 @@
 			<p class="feedback-form__title">Опишите свои эмоции:</p>
 			<textarea name="impression-desc" class="feedback-form__input feedback-form__textarea" id="#" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
 		</fieldset>
-		<input type="submit" class="btn btn--send-fdb" value="Отправить отзыв">
+		<input type="submit" class="btn btn--send-feedback" value="Отправить отзыв">
 	</form>
 
 
@@ -121,18 +114,18 @@
 		<p class="page-footer__tag"><a href="#" class="page-footer__link">#visitsedona</a></p>
 		<ul class="social">
 			<li class="social__item">
-				<a href="#" class="social-link social-link--twitter">Мы в Twitter</a>
+				<a href="#" class="social__link social__link--twitter">Мы в Twitter</a>
 			</li>
 			<li class="social__item">
-				<a href="#" class="social-link social-link--facebook">Мы в Facebook</a>
+				<a href="#" class="social__link social__link--facebook">Мы в Facebook</a>
 			</li>
 			<li class="social__item">
-				<a href="#" class="social-link social-link--youtube">Мы в Youtube</a>
+				<a href="#" class="social__link social__link--youtube">Мы в Youtube</a>
 			</li>
 		</ul>
 
 		<div class="page-footer__copyright">
-			<a href="#" class="copyright__link">Разработано
+			<a href="#" class="page-footer__link">Разработано
 				<span>HTML Academy_logo</span>
 			</a>
 		</div>

@@ -35,50 +35,67 @@
 
 	<main>
 		<article class="photo-post">
-			<a href="#" class="photo-post__link-img">
-				<img class="post-link__img" src="#" alt="" width="" height="">
+			<a href="#" class="photo-post__img-link">
+				<img class="photo-post__img" src="#" alt="" width="" height="">
 			</a>
-			<h2 class="post-link__title"><a href="#" class="photo-post__link-name">Народные просторы </a></h2>
-			<p class="photo-post__autor">Автор фото: <a href="#" class="photo-post__link-author">Борис</a></p>
-			<button type="button" class="btn photo-post__likes-btn">1350</button>
+			<h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Народные просторы </a></h2>
+			<p class="photo-post__autor">Автор фото: <a href="#" class="photo-post__author-link">Борис</a></p>
+			<button type="button" class="btn-like">1350</button>
 		</article>
 
 		<article class="photo-post">
-			<a href="#" class="photo-post__link-img">
-				<img class="post-link__img" src="#" alt="" width="" height="">
+			<a href="#" class="photo-post__img-link">
+				<img class="photo-post__img" src="#" alt="" width="" height="">
 			</a>
-			<h2 class="post-link__title"><a href="#" class="photo-post__link-name">Местная растительность</a></h2>
-			<p class="photo-post__autor">Автор фото: <a href="#" class="photo-post__link-author">Сергей</a></p>
-			<button type="button" class="btn photo-post__likes-btn">143</button>
+			<h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Местная растительность</a></h2>
+			<p class="photo-post__autor">Автор фото: <a href="#" class="photo-post__author-link">Сергей</a></p>
+			<button type="button" class="btn-like">143<</button>
 		</article>
 
 		<article class="photo-post">
-			<a href="#" class="photo-post__link-img">
-				<img class="post-link__img" src="#" alt="" width="" height="">
+			<a href="#" class="photo-post__img-link">
+				<img class="photo-post__img" src="#" alt="" width="" height="">
 			</a>
-			<h2 class="post-link__title"><a href="#" class="photo-post__link-name">Дорога на север</a></h2>
-			<p class="photo-post__autor">Автор фото: <a href="#" class="photo-post__link-author">Петр</a></p>
-			<button type="button" class="btn photo-post__likes-btn">96</button>
+			<h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Дорога на север</a></h2>
+			<p class="photo-post__autor">Автор фото: <a href="#" class="photo-post__author-link">Петр</a></p>
+			<button type="button" class="btn-like">96<</button>
 		</article>
 
 		<article class="photo-post">
-			<a href="#" class="photo-post__link-img">
-				<img class="post-link__img" src="#" alt="" width="" height="">
+			<a href="#" class="photo-post__img-link">
+				<img class="photo-post__img" src="#" alt="" width="" height="">
 			</a>
-			<h2 class="post-link__title"><a href="#" class="photo-post__link-name">Мост Дьявола </a></h2>
-			<p class="photo-post__autor">Автор фото: <a href="#" class="photo-post__link-author">Антон</a></p>
-			<button type="button" class="btn photo-post__likes-btn">254</button>
+			<h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Мост Дьявола </a></h2>
+			<p class="photo-post__autor">Автор фото: <a href="#" class="photo-post__author-link">Антон</a></p>
+			<button type="button" class="btn-like">254<</button>
 		</article>
 
-		<section class="content-block video-post"><!-- http://prntscr.com/fdcn9w + http://prntscr.com/fdcncs - один и тот же блок, только содержащий модификаторы -->
+		<section class="content-block content-block--video-intro">
 			<p class="content-block__title">Все еще сомневаетесь?</p>
 			<p class="content-block__text">Смотрите видеопрезенатацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-			<div class="video-block"> 
+		</section>
+
+		<section class="video-post">
+			
+			<div class="video-post__video">
 				<video src="#" controls width="" height=""></video>
-				<button type="button" class="video-block__button video-block__button--repeat"></button>
-				<button type="button" class="video-block__button video-block__button--subtitles"></button>
-				<button type="button" class="video-block__button video-block__button--full-screen"></button>
 			</div>
+			
+			<div class="video-post__control-block">
+				<div class="video-post__scale-block">
+					<div class="video-post__scale">
+						<div class="video-post__scale-watched"></div><!-- то, что уже проигралось, должно ведь другой заливкой заполняться? -->
+					</div>
+					<div class="video-post__toggle"></div>
+				</div>
+				<div class="video-post__buttons-block">
+					<button type="button" class="video-post__button video-post__button--repeat">repeat</button>
+					<button type="button" class="video-post__button video-post__button--subtitles">sub</button>
+					<button type="button" class="video-post__button video-post__button--full-screen">full-screen</button>
+				</div>
+				
+			</div>
+			
 		</section>
 
 	</main>
@@ -87,18 +104,18 @@
 		<p class="page-footer__tag"><a href="#" class="page-footer__link">#visitsedona</a></p>
 		<ul class="social">
 			<li class="social__item">
-				<a href="#" class="social-link social-link--twitter">Мы в Twitter</a>
+				<a href="#" class="social__link social__link--twitter">Мы в Twitter</a>
 			</li>
 			<li class="social__item">
-				<a href="#" class="social-link social-link--facebook">Мы в Facebook</a>
+				<a href="#" class="social__link social__link--facebook">Мы в Facebook</a>
 			</li>
 			<li class="social__item">
-				<a href="#" class="social-link social-link--youtube">Мы в Youtube</a>
+				<a href="#" class="social__link social__link--youtube">Мы в Youtube</a>
 			</li>
 		</ul>
 
 		<div class="page-footer__copyright">
-			<a href="#" class="copyright__link">Разработано
+			<a href="#" class="page-footer__link">Разработано
 				<span>HTML Academy_logo</span>
 			</a>
 		</div>
