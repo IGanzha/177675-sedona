@@ -1,135 +1,130 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<title>Седона: Форма обратной связи</title>
-    <link rel="stylesheet" href="css/normalize.css">
+  <head>
+    <meta charset="UTF-8">
+    <title>Седона: Форма обратной связи</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<header class="page-header">
-        <nav class="header-nav">
-            <ul class="header-nav__list">
-                <li class="header-nav__item"> <a class="header-nav__link" href="index.html">Главная</a></li>
-                <li class="header-nav__item"> <a class="header-nav__link" href="photo.html">Фото и видео</a></li>
-                <li class="header-nav__item"> <a class="header-nav__link">Форма отзыва</a></li>
-                <li class="header-nav__item"> <a class="header-nav__link" href="#">HTML ACADEMY</a></li>
-    		</ul>
-    	</nav>
-    	<button class="page-header__menu-btn" type="button">Меню</button>
-   		<div class="page-header__logo-block">
-   			<a class="page-header__logo-link">
-   				<img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Sedona-logo" width="" height="">
-    		</a>
-    	</div>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="header-nav">
+        <!-- Сюда перекинем кнопку. Зачем это делаем? Чтобы при задании класса меню открыто - у анс сразу можно было заменить бургер на крестик + открыть меню -->
+        <button class="page-header__menu-btn" type="button">Меню</button>
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="photo.html">Фото и видео</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link">Форма отзыва</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#">HTML ACADEMY</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-header__logo-block">
+        <a class="page-header__logo-link" href="index.html">
+          <img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Sedona-logo" width="83" height="102">
+        </a>
+      </div>
     </header>
-
-	<section class="welcome-block welcome-block--short">
-			<h1>Sedona</h1>
-	</section>
-
-	<section class="content-block content-block--figured">
-		<p class="content-block__title">Оставьте свой отзыв </p>
-		<p class="content-block__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях </p>
-	</section>
-
-	<form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
-		<fieldset class="feedback-form__field">
-			<p class="feedback-form__title">Представьтесь:</p>
-			<label for="first-name" class="feedback-form__label"><span class="feedback-form__label-text">Имя*:</span>
-				<input type="text" class="feedback-form__input" id="first-name" name="first-name" >
-			</label>
-
-			<label for="last-name" class="feedback-form__label"><span class="feedback-form__label-text"> Фамилия*:</span>
-				<input  type="text" class="feedback-form__input" id="last-name" name="last-name">
-			</label>
-
-			<label for="middle-name" class="feedback-form__label"><span class="feedback-form__label-text">Отчество:</span>
-				<input type="text" class="feedback-form__input" id="middle-name" name="middle-name">
-			</label>
-		</fieldset>
-
-		<fieldset class="feedback-form__field">
-			<p class="feedback-form__title">Контактная информация:</p>
-			<label for="tel" class="feedback-form__label"><span class="feedback-form__label-text">Контактный телефон*:</span>
-				<span class="feedback-form__input-wrap">
-					<input type="tel" class="feedback-form__input" id="tel" name="tel" placeholder="Введите телефон">
-					<span class="feedback-form__icon feedback-form__icon--tel">Иконка телефона</span>
-				</span>
-			</label>
-
-			<label for="email" class="feedback-form__label"> <span class="feedback-form__label-text">Электронная почта*:</span>
-				<span class="feedback-form__input-wrap">
-					<input type="email" class="feedback-form__input" id="email" name="email" placeholder="Введите e-mail">
-					<span class="feedback-form__icon feedback-form__icon--email">Иконка письма</span>
-				</span>
-			</label>
-		</fieldset>
-
-		<fieldset class="feedback-form__field">
-			<p class="feedback-form__title">Ваше общее впечатление:</p>
-			<label for="good-imp" class="feedback-form__label">
-				<input type="radio" class="feedback-form__input" name="impression" id="good-imp" value="good-imp">
-				<span class="checkbox_indicator"></span> Скорее положительное
-			</label>
-			<label for="bad-imp" class="feedback-form__label">
-				<input type="radio" class="feedback-form__input" name="impression" id="bad-imp" value="bad-imp">
-				<span class="checkbox_indicator"></span> Скорее отрицательное
-			</label>
-			<label for="neutral-imp" class="feedback-form__label">
-				<input type="radio" class="feedback-form__input" name="impression" id="neutral-imp" value="neutral-imp">
-				<span class="checkbox_indicator"></span> Затрудняюсь ответить
-			</label>
-		</fieldset>
-
-		<fieldset class="feedback-form__field">
-			<p class="feedback-form__title">Посещенные достопримечательности:</p>
-			<label for="devil-bridge" class="feedback-form__label">
-				<input type="checkbox" class="feedback-form__input" name="The devil's bridge" id="devil-bridge">
-				<span class="checkbox_indicator"></span> Мост Дьявола
-			</label>
-			<label for="slide-park" class="feedback-form__label">
-				<input type="checkbox" class="feedback-form__input" name="slide-park" id="slide-park">
-				<span class="checkbox_indicator"></span> Слайд-парк
-			</label>
-			<label for="bell-tower" class="feedback-form__label">
-				<input type="checkbox" class="feedback-form__input" name="bell-tower" id="bell-tower">
-				<span class="checkbox_indicator"></span> Гора-колокол
-			</label>
-			<label for="red_rocks" class="feedback-form__label">
-				<input type="checkbox" class="feedback-form__input" name="red_rocks" id="red_rocks">
-				<span class="checkbox_indicator"></span> Красные скалы
-			</label>
-		</fieldset>
-
-		<fieldset class="feedback-form__field">
-			<p class="feedback-form__title">Опишите свои эмоции:</p>
-			<textarea name="impression-desc" class="feedback-form__input feedback-form__textarea" id="#" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
-		</fieldset>
-		<input type="submit" class="btn btn--send-feedback" value="Отправить отзыв">
-	</form>
-
-
-	<footer class="page-footer">
-		<p class="page-footer__tag"><a href="#" class="page-footer__link">#visitsedona</a></p>
-		<ul class="social">
-			<li class="social__item">
-				<a href="#" class="social__link social__link--twitter">Мы в Twitter</a>
-			</li>
-			<li class="social__item">
-				<a href="#" class="social__link social__link--facebook">Мы в Facebook</a>
-			</li>
-			<li class="social__item">
-				<a href="#" class="social__link social__link--youtube">Мы в Youtube</a>
-			</li>
-		</ul>
-
-		<div class="page-footer__copyright">
-			<a href="#" class="page-footer__link">Разработано
-				<span>HTML Academy_logo</span>
-			</a>
-		</div>
-	</footer>
-<script src="#"></script>
-</body>
+    <section class="welcome-block welcome-block--short">
+        <h1>Sedona</h1>
+    </section>
+    <section class="content-block content-block--figured">
+      <p class="content-block__title">Оставьте свой отзыв </p>
+      <p class="content-block__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях </p>
+    </section>
+    <form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
+      <fieldset class="feedback-form__field">
+        <p class="feedback-form__title">Представьтесь:</p>
+        <label for="first-name" class="feedback-form__label"><span class="feedback-form__label-text">Имя*:</span>
+          <input type="text" class="feedback-form__input" id="first-name" name="first-name" >
+        </label>
+        <label for="last-name" class="feedback-form__label"><span class="feedback-form__label-text"> Фамилия*:</span>
+          <input  type="text" class="feedback-form__input" id="last-name" name="last-name">
+        </label>
+        <label for="middle-name" class="feedback-form__label"><span class="feedback-form__label-text">Отчество:</span>
+          <input type="text" class="feedback-form__input" id="middle-name" name="middle-name">
+        </label>
+      </fieldset>
+      <fieldset class="feedback-form__field">
+        <p class="feedback-form__title">Контактная информация:</p>
+        <label for="tel" class="feedback-form__label"><span class="feedback-form__label-text">Контактный телефон*:</span>
+          <span class="feedback-form__input-wrap">
+            <input type="tel" class="feedback-form__input" id="tel" name="tel" placeholder="Введите телефон">
+            <span class="feedback-form__icon feedback-form__icon--tel">Иконка телефона</span>
+          </span>
+        </label>
+        <label for="email" class="feedback-form__label"> <span class="feedback-form__label-text">Электронная почта*:</span>
+          <span class="feedback-form__input-wrap">
+            <input type="email" class="feedback-form__input" id="email" name="email" placeholder="Введите e-mail">
+            <span class="feedback-form__icon feedback-form__icon--email">Иконка письма</span>
+          </span>
+        </label>
+      </fieldset>
+      <fieldset class="feedback-form__field">
+        <p class="feedback-form__title">Ваше общее впечатление:</p>
+        <label for="good-imp" class="feedback-form__label">
+          <input type="radio" class="feedback-form__input" name="impression" id="good-imp" value="good-imp">
+          <span class="checkbox_indicator"></span> Скорее положительное
+        </label>
+        <label for="bad-imp" class="feedback-form__label">
+          <input type="radio" class="feedback-form__input" name="impression" id="bad-imp" value="bad-imp">
+          <span class="checkbox_indicator"></span> Скорее отрицательное
+        </label>
+        <label for="neutral-imp" class="feedback-form__label">
+          <input type="radio" class="feedback-form__input" name="impression" id="neutral-imp" value="neutral-imp">
+          <span class="checkbox_indicator"></span> Затрудняюсь ответить
+        </label>
+      </fieldset>
+      <fieldset class="feedback-form__field">
+        <p class="feedback-form__title">Посещенные достопримечательности:</p>
+        <label for="devil-bridge" class="feedback-form__label">
+          <input type="checkbox" class="feedback-form__input" name="The devil's bridge" id="devil-bridge">
+          <span class="checkbox_indicator"></span> Мост Дьявола
+        </label>
+        <label for="slide-park" class="feedback-form__label">
+          <input type="checkbox" class="feedback-form__input" name="slide-park" id="slide-park">
+          <span class="checkbox_indicator"></span> Слайд-парк
+        </label>
+        <label for="bell-tower" class="feedback-form__label">
+          <input type="checkbox" class="feedback-form__input" name="bell-tower" id="bell-tower">
+          <span class="checkbox_indicator"></span> Гора-колокол
+        </label>
+        <label for="red_rocks" class="feedback-form__label">
+          <input type="checkbox" class="feedback-form__input" name="red_rocks" id="red_rocks">
+          <span class="checkbox_indicator"></span> Красные скалы
+        </label>
+      </fieldset>
+      <fieldset class="feedback-form__field">
+        <p class="feedback-form__title">Опишите свои эмоции:</p>
+        <textarea name="impression-desc" class="feedback-form__input feedback-form__textarea" id="#" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
+      </fieldset>
+      <input type="submit" class="btn btn--send-feedback" value="Отправить отзыв">
+    </form>
+    <footer class="page-footer">
+      <p class="page-footer__tag"><a href="#" class="page-footer__link">#visitsedona</a></p>
+      <ul class="social">
+        <li class="social__item">
+          <a href="#" class="social__link social__link--twitter">Мы в Twitter</a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--facebook">Мы в Facebook</a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--youtube">Мы в Youtube</a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright">
+        <a href="#" class="page-footer__link">Разработано
+          <span>HTML Academy_logo</span>
+        </a>
+      </div>
+    </footer>
+  <script src="#"></script>
+  </body>
 </html>

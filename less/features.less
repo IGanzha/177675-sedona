@@ -1,16 +1,26 @@
 .features {
-	background-color: #81b3d2; 
- }
+  background-color: #81b3d2;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
 
- .features__img {
- 	width: 320px;
- 	height: 260px;
- }
+.features__img {
+  width: 100%;
+  height: 260px;
+}
 
- .features__img--feat1 {
- 	background: url("../img/photo-city-mobile@1x.jpg");
- }
+.features__img--feat1 {
+  background: url("../img/photo-city-mobile@1x.jpg") center center no-repeat;
+  background-size: cover;
+}
 
- .features__img--feat2 {
-  	background: url("../img/photo-bridge-mobile@1x.jpg");
- }
+.features__img--feat2 {
+  background: url("../img/photo-bridge-mobile@1x.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.features__title,
+.features__desc {
+  text-align: center;
+}
