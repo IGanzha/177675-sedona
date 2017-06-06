@@ -1,16 +1,20 @@
 
 .page-header {
-  display:flex;
-  flex-direction: column;
-  justify-content: flex-start;
   position: relative;
+  text-align: center;
 }
 
 .page-header__logo-block {
-  flex-shrink: 0;
-  margin:0 auto;
+  margin: 0 auto;
   padding:0;
-  /*Почему логотип не прилипает к меню? Маргинов/паддингов нет.*/
+  /*text-align: center;*/
+
+}
+
+.page-header__logo-link {
+  display: inline-block;
+  vertical-align: middle;
+  height: 56px;
 }
 
 .page-header__menu-btn {

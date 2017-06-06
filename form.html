@@ -27,7 +27,7 @@
       </nav>
       <div class="page-header__logo-block">
         <a class="page-header__logo-link" href="index.html">
-          <img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Sedona-logo" width="83" height="102">
+          <img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Sedona-logo" width="102" height="83">
         </a>
       </div>
     </header>
@@ -42,10 +42,10 @@
       <fieldset class="feedback-form__field">
         <p class="feedback-form__title">Представьтесь:</p>
         <label for="first-name" class="feedback-form__label"><span class="feedback-form__label-text">Имя*:</span>
-          <input type="text" class="feedback-form__input" id="first-name" name="first-name" >
+          <input type="text" class="feedback-form__input" id="first-name" name="first-name" required>
         </label>
         <label for="last-name" class="feedback-form__label"><span class="feedback-form__label-text"> Фамилия*:</span>
-          <input  type="text" class="feedback-form__input" id="last-name" name="last-name">
+          <input  type="text" class="feedback-form__input" id="last-name" name="last-name" required>
         </label>
         <label for="middle-name" class="feedback-form__label"><span class="feedback-form__label-text">Отчество:</span>
           <input type="text" class="feedback-form__input" id="middle-name" name="middle-name">
@@ -53,22 +53,22 @@
       </fieldset>
       <fieldset class="feedback-form__field">
         <p class="feedback-form__title">Контактная информация:</p>
-        <label for="tel" class="feedback-form__label"><span class="feedback-form__label-text">Контактный телефон*:</span>
+        <label for="tel" class="feedback-form__label feedback-form__label--contacts"><span class="feedback-form__label-text">Контактный телефон*:</span>
           <span class="feedback-form__input-wrap">
-            <input type="tel" class="feedback-form__input" id="tel" name="tel" placeholder="Введите телефон">
+            <input type="tel" class="feedback-form__input" id="tel" name="tel" placeholder="Введите телефон" required>
             <span class="feedback-form__icon feedback-form__icon--tel">Иконка телефона</span>
           </span>
         </label>
-        <label for="email" class="feedback-form__label"> <span class="feedback-form__label-text">Электронная почта*:</span>
+        <label for="email" class="feedback-form__label feedback-form__label--contacts"> <span class="feedback-form__label-text">Электронная почта*:</span>
           <span class="feedback-form__input-wrap">
-            <input type="email" class="feedback-form__input" id="email" name="email" placeholder="Введите e-mail">
+            <input type="email" class="feedback-form__input" id="email" name="email" placeholder="Введите e-mail" required>
             <span class="feedback-form__icon feedback-form__icon--email">Иконка письма</span>
           </span>
         </label>
       </fieldset>
-      <fieldset class="feedback-form__field">
+      <fieldset class="feedback-form__field feedback-form__field--impression">
         <p class="feedback-form__title">Ваше общее впечатление:</p>
-        <label for="good-imp" class="feedback-form__label">
+        <label for="good-imp" class="feedback-form__label feedback-form__label--impression">
           <input type="radio" class="feedback-form__input" name="impression" id="good-imp" value="good-imp">
           <span class="checkbox_indicator"></span> Скорее положительное
         </label>
@@ -81,7 +81,7 @@
           <span class="checkbox_indicator"></span> Затрудняюсь ответить
         </label>
       </fieldset>
-      <fieldset class="feedback-form__field">
+      <fieldset class="feedback-form__field feedback-form__field--visited-places">
         <p class="feedback-form__title">Посещенные достопримечательности:</p>
         <label for="devil-bridge" class="feedback-form__label">
           <input type="checkbox" class="feedback-form__input" name="The devil's bridge" id="devil-bridge">
@@ -102,7 +102,7 @@
       </fieldset>
       <fieldset class="feedback-form__field">
         <p class="feedback-form__title">Опишите свои эмоции:</p>
-        <textarea name="impression-desc" class="feedback-form__input feedback-form__textarea" id="#" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
+        <textarea name="impression-desc" class="feedback-form__textarea" id="#"  rows="8">Опишите подробно все свои восторги</textarea>
       </fieldset>
       <input type="submit" class="btn btn--send-feedback" value="Отправить отзыв">
     </form>
