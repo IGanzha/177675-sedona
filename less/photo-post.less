@@ -1,0 +1,38 @@
+.photo-post {
+  padding:20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.photo-post:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+
+.photo-post__img-link,
+.photo-post__title-link,
+.photo-post__author-link {
+	text-decoration: none;
+	color:black;
+}
+
+.photo-post__author {
+  text-transform: none;
+}
+
+.btn-like {
+  border: none;
+  background: none;
+  position: relative;
+  margin-left: 35px;
+  cursor: pointer;
+  line-height: 24px;
+}
+
+.btn-like::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 24px;
+  width: 24px;
+  left: -35px;
+  background: url("../img/icon-like.svg") center center no-repeat;
+}
