@@ -1,7 +1,8 @@
 .features {
   background-color: #81b3d2;
   text-align: center;
-  padding-top: 10px;
+  padding: 0;
+
 }
 
 .features__img {
@@ -17,4 +18,30 @@
 .features__img--feat2 {
   background: url("../img/photo-bridge-mobile@1x.jpg") center center no-repeat;
   background-size: cover;
+}
+
+.features__content {
+  padding:40px 30px;
+}
+
+.features__desc {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .features {
+    display: flex;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .features {
+    display: flex;
+    .container();
+  }
 }

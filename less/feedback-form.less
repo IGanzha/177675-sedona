@@ -1,20 +1,10 @@
-.feedback-form {
-
-}
-
 .feedback-form__field {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   padding:20px;
-
   border: none;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.feedback-form__field:first-child {
-  border-top: 1px solid #e5e5e5;
 }
 
 .feedback-form__title {
@@ -31,12 +21,26 @@
   align-items: center;
 }
 
-.feedback-form__label--contacts {
-  flex-wrap: wrap;
-}
-
 .feedback-form__input-wrap {
   width: 100%;
+  position: relative;
+}
+
+.feedback-form__icon {
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 56px;
+  height: 56px;
+}
+
+.feedback-form__icon--tel {
+  background:#e5e5e5 url('../img/icon-phone.svg') center center no-repeat;
+}
+
+.feedback-form__icon--email {
+  background:#e5e5e5 url('../img/icon-mail.svg') center center no-repeat;
 }
 
 .feedback-form__label-text {
@@ -57,6 +61,10 @@
   padding: 20px;
 }
 
+.feedback-form__field--contacts .feedback-form__input {
+  padding-right: 63px;
+}
+
 .feedback-form__textarea {
   width: 100%;
   background-color: #f2f2f2;
@@ -73,7 +81,8 @@
   font-size: 0;
 }
 
-.checkbox_indicator {
+.feedback-form__checkbox-indicator {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   width: 56px;
@@ -83,16 +92,186 @@
   margin-right: 24px;
 }
 
-.feedback-form__field--impression .checkbox_indicator {
+.feedback-form__field--impression .feedback-form__checkbox-indicator {
   border-radius: 50%;
 }
 
-.feedback-form__field--visited-places .checkbox_indicator {
+.feedback-form__field--visited-places .feedback-form__checkbox-indicator {
   border-radius: 5px;
 }
 
+input[type="radio"]:checked + .feedback-form__checkbox-indicator::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  top: 17px;
+  left:17px;
+  background-color: #333333;
+}
 
-.btn--send-feedback {
-  text-transform: uppercase;
-  border:none;
+input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::before,
+input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  border-radius: 2px;
+  top: 17px;
+  left:17px;
+  background-color: #231f20;
+}
+
+input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::before {
+  width: 15px;
+  transform: rotate(45deg);
+  top: 27px;
+  left:16px;
+}
+
+input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
+  width: 23px;
+  transform: rotate(-45deg);
+  top: 24px;
+  left: 23px;
+}
+
+
+@media (max-width: 767px) {
+  .feedback-form__field {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .feedback-form__field:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+
+  .feedback-form__field:last-child {
+    border: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .feedback-form {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 0 70px;
+  }
+
+  .feedback-form__field {
+    flex-direction: row;
+    margin: 0;
+    padding: 0 50px;
+    margin-bottom: 50px;
+    justify-content: flex-start;
+  }
+
+  .feedback-form__field--introduction,
+  .feedback-form__field--impression {
+    width: 50%;
+  }
+
+  .feedback-form__field--impression {
+    order: -1;
+    border-right: 1px solid #e5e5e5;
+  }
+
+  .feedback-form__field--contacts {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .feedback-form__label--contacts {
+    width: 100%;
+    min-width: 400px;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+  }
+
+  .feedback-form__label--contacts:first-child {
+    padding-right: 80px;
+  }
+
+  .feedback-form__field--visited-places {
+    display: flex;
+    width: 100%;
+  }
+
+  .feedback-form__label--visited-places {
+    width: 25%;
+  }
+
+  .feedback-form__field--feedback-text {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feedback-form {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 0 70px;
+  }
+
+  .feedback-form__field {
+    flex-direction: row;
+    margin: 0;
+    padding: 0 50px;
+    margin-bottom: 50px;
+    justify-content: flex-start;
+  }
+
+  .feedback-form__field--introduction,
+  .feedback-form__field--impression {
+    width: 50%;
+  }
+
+  .feedback-form__field--impression {
+    order: -1;
+    border-right: 1px solid #e5e5e5;
+  }
+
+  .feedback-form__field--contacts {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+  }
+
+  .feedback-form__label--contacts {
+    width: 40%;
+    min-width: 400px;
+    flex-shrink: 1;
+    flex-wrap: nowrap;
+  }
+
+  .feedback-form__label--contacts:first-child {
+    padding-right: 80px;
+  }
+
+  .feedback-form__field--visited-places {
+    display: flex;
+    width: 100%;
+  }
+
+  .feedback-form__label--visited-places {
+    width: 25%;
+
+  }
+
+  .feedback-form__desktop-hidden {
+    font-size: 0;
+  }
+
+  .feedback-form__field--feedback-text {
+    width: 100%;
+  }
+
+
 }

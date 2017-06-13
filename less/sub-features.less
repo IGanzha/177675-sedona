@@ -1,7 +1,83 @@
 .sub-features {
-  padding: 0 20px 0 70px;
-  /*text-align: center;*/
-
+  padding: 0 20px;
 }
 
 
+@media (max-width: 767px) {
+
+  .sub-features__block {
+    margin-left:50px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .sub-features {
+    display: flex;
+  }
+
+  .sub-features__block {
+    padding: 10px;
+    padding-top: 60px;
+    position: relative;
+    text-align: center;
+  }
+
+  .sub-features__block::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 75px;
+    height: 75px;
+    top: 60px;
+    left: 30%;
+  }
+
+  .sub-features__block--lodging {
+    background: url("") center center no-repeat;
+  }
+
+  .sub-features__block--souvenirs {
+    background: url("") center center no-repeat;
+  }
+
+  .sub-features__block--food {
+    background: url("") center center no-repeat;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .sub-features {
+    display: flex;
+    .container();
+  }
+
+  .sub-features__block {
+    padding: 10px;
+    padding-top: 60px;
+    position: relative;
+    text-align: center;
+  }
+
+  .sub-features__block::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 75px;
+    height: 75px;
+    top: 60px;
+    left: 30%;
+  }
+
+  .sub-features__block--lodging {
+    background: url("") center center no-repeat;
+  }
+
+  .sub-features__block--souvenirs {
+    background: url("") center center no-repeat;
+  }
+
+  .sub-features__block--food {
+    background: url("") center center no-repeat;
+  }
+}

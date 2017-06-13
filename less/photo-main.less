@@ -1,0 +1,23 @@
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .photo-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*почему не срабатывает на последнем фото (мост дьявола)? последний пост не смещается влево... */
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    /*margin: 0 auto;*/
+    .container();
+  }
+}

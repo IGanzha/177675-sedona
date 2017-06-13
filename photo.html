@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
     <title>Sedona: Photo</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -39,38 +40,54 @@
       <p class="content-block__title">Фото и видео</p>
       <p class="content-block__text">Не можете решиться на путешествие из-за курса? Фотографии помогут Вам позабыть о политике и экономике.</p>
     </section>
-    <main>
+    <main class="photo-main">
       <article class="photo-post">
         <a href="#" class="photo-post__img-link">
           <img class="photo-post__img" src="img/photo-1-mobile@1x.jpg" alt="Народные просторы" width="280" height="280">
         </a>
-        <h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Народные просторы </a></h2>
-        <p class="photo-post__author">Автор фото: <a href="#" class="photo-post__author-link">Борис</a></p>
-        <button type="button" class="btn-like">1350</button>
+        <div class="photo-post__content">
+          <div class="photo-post__title-block">
+            <h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Народные просторы </a></h2>
+            <p class="photo-post__author">Автор фото: <a href="#" class="photo-post__author-link">Борис</a></p>
+          </div>
+          <button type="button" class="photo-post__btn-like">1350</button>
+        </div>
       </article>
       <article class="photo-post">
         <a href="#" class="photo-post__img-link">
           <img class="photo-post__img" src="img/photo-2-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
         </a>
-        <h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Местная растительность</a></h2>
-        <p class="photo-post__author">Автор фото: <a href="#" class="photo-post__author-link">Сергей</a></p>
-        <button type="button" class="btn-like">143</button>
+        <div class="photo-post__content">
+          <div class="photo-post__title-block">
+            <h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Местная растительность</a></h2>
+            <p class="photo-post__author">Автор фото: <a href="#" class="photo-post__author-link">Сергей</a></p>
+          </div>
+          <button type="button" class="photo-post__btn-like">1143</button>
+        </div>
       </article>
       <article class="photo-post">
         <a href="#" class="photo-post__img-link">
           <img class="photo-post__img" src="img/photo-3-mobile@1x.jpg" alt="Дорога на север" width="280" height="280">
         </a>
-        <h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Дорога на север</a></h2>
-        <p class="photo-post__author">Автор фото: <a href="#" class="photo-post__author-link">Петр</a></p>
-        <button type="button" class="btn-like">96</button>
+        <div class="photo-post__content">
+          <div class="photo-post__title-block">
+            <h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Дорога на север</a></h2>
+            <p class="photo-post__author">Автор фото: <a href="#" class="photo-post__author-link">Пётр</a></p>
+          </div>
+          <button type="button" class="photo-post__btn-like">96</button>
+        </div>
       </article>
       <article class="photo-post">
         <a href="#" class="photo-post__img-link">
           <img class="photo-post__img" src="img/photo-4-mobile@1x.jpg" alt="Мост Дьявола" width="280" height="280">
         </a>
-        <h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Мост Дьявола </a></h2>
-        <p class="photo-post__author">Автор фото: <a href="#" class="photo-post__author-link">Антон</a></p>
-        <button type="button" class="btn-like">254</button>
+        <div class="photo-post__content">
+          <div class="photo-post__title-block">
+            <h2 class="photo-post__title"><a href="#" class="photo-post__title-link">Мост Дьявола</a></h2>
+            <p class="photo-post__author">Автор фото: <a href="#" class="photo-post__author-link">Антон</a></p>
+          </div>
+          <button type="button" class="photo-post__btn-like">254</button>
+        </div>
       </article>
       <section class="content-block content-block--video-intro">
         <p class="content-block__title">Все еще сомневаетесь?</p>
@@ -78,19 +95,23 @@
       </section>
       <section class="video-post">
         <div class="video-post__video">
-          <video src="#" controls width="" height=""></video>
+          <img class="video-post__video-img" src="img/video-mobile@1x.jpg" alt="Видео о Седоне" align="center">
         </div>
         <div class="video-post__control-block">
           <div class="video-post__scale-block">
             <div class="video-post__scale">
               <div class="video-post__scale-watched"></div>
+              <div class="video-post__toggle"></div>
             </div>
-            <div class="video-post__toggle"></div>
           </div>
           <div class="video-post__buttons-block">
-            <button type="button" class="video-post__button video-post__button--repeat">repeat</button>
-            <button type="button" class="video-post__button video-post__button--subtitles">sub</button>
-            <button type="button" class="video-post__button video-post__button--full-screen">full-screen</button>
+            <div class="video-post__buttons-inner">
+              <button type="button" class="video-post__button video-post__button--repeat">repeat</button>
+            </div>
+            <div class="video-post__buttons-inner">
+              <button type="button" class="video-post__button video-post__button--subtitles">sub</button>
+              <button type="button" class="video-post__button video-post__button--full-screen">full-screen</button>
+            </div>
           </div>
         </div>
       </section>
