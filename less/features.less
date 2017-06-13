@@ -1,6 +1,7 @@
 .features {
   background-color: #81b3d2;
   text-align: center;
+  padding: 0;
 
 }
 
@@ -19,23 +20,26 @@
   background-size: cover;
 }
 
-
-@media (max-width: 320px) {
-  .features{
-    padding-top: 10px;
-  }
+.features__content {
+  padding:40px 30px;
 }
 
-@media (min-width: 321px) and (max-width: 768px) {
+.features__desc {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .features {
     display: flex;
   }
-
-
-
 }
 
-@media (min-width: 769px) {
+
+@media (min-width: 1200px) {
   .features {
     display: flex;
     .container();

@@ -40,7 +40,7 @@
       <p class="content-block__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях </p>
     </section>
     <form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
-      <fieldset class="feedback-form__field">
+      <fieldset class="feedback-form__field feedback-form__field--introduction">
         <p class="feedback-form__title">Представьтесь:</p>
         <label for="first-name" class="feedback-form__label"><span class="feedback-form__label-text">Имя*:</span>
           <input type="text" class="feedback-form__input" id="first-name" name="first-name" required>
@@ -52,9 +52,9 @@
           <input type="text" class="feedback-form__input" id="middle-name" name="middle-name">
         </label>
       </fieldset>
-      <fieldset class="feedback-form__field">
+      <fieldset class="feedback-form__field feedback-form__field--contacts">
         <p class="feedback-form__title">Контактная информация:</p>
-        <label for="tel" class="feedback-form__label feedback-form__label--contacts"><span class="feedback-form__label-text">Контактный телефон*:</span>
+        <label for="tel" class="feedback-form__label feedback-form__label--contacts"><span class="feedback-form__label-text"> <span class="feedback-form__desktop-hidden"> Контактный </span> телефон*:</span>
           <span class="feedback-form__input-wrap">
             <input type="tel" class="feedback-form__input" id="tel" name="tel" placeholder="Введите телефон" required>
             <span class="feedback-form__icon feedback-form__icon--tel">Иконка телефона</span>
@@ -84,24 +84,24 @@
       </fieldset>
       <fieldset class="feedback-form__field feedback-form__field--visited-places">
         <p class="feedback-form__title">Посещенные достопримечательности:</p>
-        <label for="devil-bridge" class="feedback-form__label">
+        <label for="devil-bridge" class="feedback-form__label feedback-form__label--visited-places">
           <input type="checkbox" class="feedback-form__input" name="The devil's bridge" id="devil-bridge">
           <span class="feedback-form__checkbox-indicator"></span> Мост Дьявола
         </label>
-        <label for="slide-park" class="feedback-form__label">
+        <label for="slide-park" class="feedback-form__label feedback-form__label--visited-places">
           <input type="checkbox" class="feedback-form__input" name="slide-park" id="slide-park">
           <span class="feedback-form__checkbox-indicator"></span> Слайд-парк
         </label>
-        <label for="bell-tower" class="feedback-form__label">
+        <label for="bell-tower" class="feedback-form__label feedback-form__label--visited-places">
           <input type="checkbox" class="feedback-form__input" name="bell-tower" id="bell-tower">
           <span class="feedback-form__checkbox-indicator"></span> Гора-колокол
         </label>
-        <label for="red_rocks" class="feedback-form__label">
+        <label for="red_rocks" class="feedback-form__label feedback-form__label--visited-places">
           <input type="checkbox" class="feedback-form__input" name="red_rocks" id="red_rocks">
           <span class="feedback-form__checkbox-indicator"></span> Красные скалы
         </label>
       </fieldset>
-      <fieldset class="feedback-form__field">
+      <fieldset class="feedback-form__field feedback-form__field--feedback-text">
         <p class="feedback-form__title">Опишите свои эмоции:</p>
         <textarea name="impression-desc" class="feedback-form__textarea" id="#"  rows="8">Опишите подробно все свои восторги</textarea>
       </fieldset>
