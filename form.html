@@ -43,10 +43,10 @@
       <fieldset class="feedback-form__field feedback-form__field--introduction">
         <p class="feedback-form__title">Представьтесь:</p>
         <label for="first-name" class="feedback-form__label"><span class="feedback-form__label-text">Имя*:</span>
-          <input type="text" class="feedback-form__input" id="first-name" name="first-name" required>
+          <input type="text" class="feedback-form__input" id="first-name" name="first-name" >
         </label>
         <label for="last-name" class="feedback-form__label"><span class="feedback-form__label-text"> Фамилия*:</span>
-          <input  type="text" class="feedback-form__input" id="last-name" name="last-name" required>
+          <input  type="text" class="feedback-form__input" id="last-name" name="last-name" >
         </label>
         <label for="middle-name" class="feedback-form__label"><span class="feedback-form__label-text">Отчество:</span>
           <input type="text" class="feedback-form__input" id="middle-name" name="middle-name">
@@ -54,15 +54,15 @@
       </fieldset>
       <fieldset class="feedback-form__field feedback-form__field--contacts">
         <p class="feedback-form__title">Контактная информация:</p>
-        <label for="tel" class="feedback-form__label feedback-form__label--contacts"><span class="feedback-form__label-text"> <span class="feedback-form__desktop-hidden"> Контактный </span> телефон*:</span>
+        <label for="phone" class="feedback-form__label feedback-form__label--contacts"><span class="feedback-form__label-text"> <span class="feedback-form__desktop-hidden"> Контактный </span> телефон*:</span>
           <span class="feedback-form__input-wrap">
-            <input type="tel" class="feedback-form__input" id="tel" name="tel" placeholder="Введите телефон" required>
-            <span class="feedback-form__icon feedback-form__icon--tel">Иконка телефона</span>
+            <input type="phone" class="feedback-form__input" id="phone" name="phone" placeholder="Введите телефон" >
+            <span class="feedback-form__icon feedback-form__icon--phone">Иконка телефона</span>
           </span>
         </label>
         <label for="email" class="feedback-form__label feedback-form__label--contacts"> <span class="feedback-form__label-text">Электронная почта*:</span>
           <span class="feedback-form__input-wrap">
-            <input type="email" class="feedback-form__input" id="email" name="email" placeholder="Введите e-mail" required>
+            <input type="email" class="feedback-form__input" id="email" name="email" placeholder="Введите e-mail" >
             <span class="feedback-form__icon feedback-form__icon--email">Иконка письма</span>
           </span>
         </label>
@@ -140,13 +140,13 @@
     <section class="popup popup--failure">
       <div class="popup__content">
         <p class="popup__title">Что-то пошло не так!</p>
-        <p class="popup__text">Проверьте поля, выделенные красным, скорее всего Вы забыли ихзаполнить</p>
+        <p class="popup__text">Проверьте поля, выделенные красным, скорее всего Вы забыли их заполнить</p>
       </div>
       <div class="popup__btn-block">
         <button class="popup__btn" type="button">ОК</button>
       </div>
     </section>
 
-  <script src="#"></script>
+  <script src="js/script.js"></script>
   </body>
 </html>
