@@ -155,57 +155,68 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
   .feedback-form {
     display: flex;
     flex-wrap: wrap;
-
     padding: 0 70px;
-  }
-
-  .feedback-form__field {
-    flex-direction: row;
-    margin: 0;
-    padding: 0 50px;
-    margin-bottom: 50px;
-    justify-content: flex-start;
-  }
-
-  .feedback-form__field--introduction,
-  .feedback-form__field--impression {
-    width: 50%;
+    .container();
   }
 
   .feedback-form__field--impression {
     order: -1;
-    border-right: 1px solid #e5e5e5;
+    width: 50%;
+    border-right: 1px solid #dadada;
+  }
+
+  .feedback-form__field--introduction {
+    width: 50%;
+    padding-left: 75px;
   }
 
   .feedback-form__field--contacts {
     width: 100%;
-    display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+
+    & .feedback-form__title {
+      width: 100%;
+    }
+
+    & .feedback-form__label {
+      width: 50%;
+    }
   }
 
   .feedback-form__label--contacts {
-    width: 100%;
-    min-width: 400px;
-    flex-shrink: 1;
-    flex-wrap: wrap;
+    padding-right: 75px;
   }
 
-  .feedback-form__label--contacts:first-child {
-    padding-right: 80px;
+    .feedback-form__label--contacts:last-child {
+    padding-right: 0;
+  }
+
+  .feedback-form__desktop-hidden {
+    font-size: 0;
   }
 
   .feedback-form__field--visited-places {
-    display: flex;
-    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & .feedback-form__title {
+      width: 100%;
+    }
   }
 
   .feedback-form__label--visited-places {
     width: 25%;
   }
 
+
   .feedback-form__field--feedback-text {
     width: 100%;
+  }
+
+  .feedback-form__required-fields {
+    margin-left: auto;
+    padding: 20px;
   }
 }
 
@@ -213,64 +224,67 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
   .feedback-form {
     display: flex;
     flex-wrap: wrap;
-
     padding: 0 70px;
-  }
-
-  .feedback-form__field {
-    flex-direction: row;
-    margin: 0;
-    padding: 0 50px;
-    margin-bottom: 50px;
-    justify-content: flex-start;
-  }
-
-  .feedback-form__field--introduction,
-  .feedback-form__field--impression {
-    width: 50%;
+    .container();
   }
 
   .feedback-form__field--impression {
     order: -1;
-    border-right: 1px solid #e5e5e5;
+    width: 50%;
+    border-right: 1px solid #dadada;
+  }
+
+  .feedback-form__field--introduction {
+    width: 50%;
+    padding-left: 75px;
   }
 
   .feedback-form__field--contacts {
     width: 100%;
-    display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
+    & .feedback-form__title {
+      width: 100%;
+    }
+
+    & .feedback-form__label {
+      width: 50%;
+    }
   }
 
   .feedback-form__label--contacts {
-    width: 40%;
-    min-width: 400px;
-    flex-shrink: 1;
-    flex-wrap: nowrap;
+    padding-right: 75px;
   }
 
-  .feedback-form__label--contacts:first-child {
-    padding-right: 80px;
-  }
-
-  .feedback-form__field--visited-places {
-    display: flex;
-    width: 100%;
-  }
-
-  .feedback-form__label--visited-places {
-    width: 25%;
-
+    .feedback-form__label--contacts:last-child {
+    padding-right: 0;
   }
 
   .feedback-form__desktop-hidden {
     font-size: 0;
   }
 
+  .feedback-form__field--visited-places {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & .feedback-form__title {
+      width: 100%;
+    }
+  }
+
+  .feedback-form__label--visited-places {
+    width: 25%;
+  }
+
+
   .feedback-form__field--feedback-text {
     width: 100%;
   }
 
-
+  .feedback-form__required-fields {
+    margin-left: auto;
+    padding: 20px;
+  }
 }
