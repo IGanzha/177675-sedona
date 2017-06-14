@@ -1,36 +1,13 @@
 .welcome-block {
-	height:390px;
   width: 100%;
 	background: url("../img/bg-back-mobile@1x.jpg") center center no-repeat;
   background-size: cover;
-	padding-top: 90px;
 }
 
-.welcome-block--short {
-	height: 160px;
-	padding-top: 50px;
-}
+
 
 .welcome-block h1 {
 	font-size: 0;
-}
-
-.welcome-block--short h1 {
-  background: url("../img/text-sedona.svg") center center no-repeat;
-  background-size: cover;
-  height: 40px;
-  width: 230px;
-  margin: 0 auto;
-}
-
-.welcome-block__p-one {
-	margin: 0 auto;
-	font-size: 0;
-
-  height: 214px;
-  width: 280px;
-	background: url("../img/text-sedona-index.svg") center center no-repeat;
-  background-size: cover;
 }
 
 .welcome-block__p-two {
@@ -39,3 +16,80 @@
 	font-size: 0px;
 }
 
+@media (max-width: 767px) {
+  .welcome-block {
+    padding-top: 90px;
+    height:390px;
+  }
+
+  .welcome-block--short {
+  height: 160px;
+  padding-top: 50px;
+}
+
+  .welcome-block--short h1 {
+    background: url("../img/text-sedona.svg") center center no-repeat;
+    background-size: cover;
+    height: 40px;
+    width: 230px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .welcome-block {
+    padding-top: 75px;
+    height: 520px;
+  }
+
+  .welcome-block__p-one {
+    margin: 0 auto;
+    font-size: 0;
+    height: 355px;
+    width: 470px;
+    background: url("../img/text-sedona-index.svg") center center no-repeat;
+    background-size: cover;
+  }
+
+  .welcome-block--short {
+    height: 290px;
+    padding-top: 100px;
+  }
+
+  .welcome-block--short h1 {
+    background: url("../img/text-sedona.svg") center center no-repeat;
+    background-size: cover;
+    height: 80px;
+    width: 460px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .welcome-block {
+    padding-top: 75px;
+    height: 520px;
+  }
+
+  .welcome-block__p-one {
+    margin: 0 auto;
+    font-size: 0;
+    height: 355px;
+    width: 470px;
+    background: url("../img/text-sedona-index.svg") center center no-repeat;
+    background-size: cover;
+  }
+
+   .welcome-block--short {
+    height: 300px;
+    padding-top: 100px;
+  }
+
+  .welcome-block--short h1 {
+    background: url("../img/text-sedona.svg") center center no-repeat;
+    background-size: cover;
+    height: 80px;
+    width: 462px;
+    margin: 0 auto;
+  }
+}
