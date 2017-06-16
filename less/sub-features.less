@@ -10,7 +10,6 @@
   margin-bottom: 0;
 }
 
-
 .sub-features__block::before {
   content: "";
   position: absolute;
@@ -44,7 +43,7 @@
 @media (max-width: 767px) {
 
   .sub-features__block {
-    margin-left:30px;
+    margin-left: 30px;
     margin-bottom: 40px;
   }
 
@@ -69,10 +68,10 @@
   }
 
   .sub-features__block {
+    width: 33%;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
-    width: 165px;
     position: relative;
     text-align: center;
   }
@@ -111,13 +110,17 @@
 
 @media (min-width: 1200px) {
   .sub-features {
-    display: flex;
     .container();
+    display: flex;
+    padding: 165px 45px 65px 45px;
+    justify-content: space-between;
   }
 
   .sub-features__block {
-    padding: 10px;
-    padding-top: 60px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    width: 33%;
     position: relative;
     text-align: center;
   }
@@ -126,10 +129,11 @@
     content: "";
     position: absolute;
     display: block;
-    width: 75px;
-    height: 75px;
-    top: 60px;
-    left: 30%;
+    width: 76px;
+    height: 76px;
+    top: -105px;
+    left: 50%;
+    margin-left:-38px;
   }
 
   .sub-features__block--lodging {
@@ -138,6 +142,13 @@
 
   .sub-features__block--souvenirs {
     background: url("") center center no-repeat;
+
+    order: 2;
+  }
+
+  .sub-features__block--souvenirs::before {
+    width: 66px;
+    height: 76px;
   }
 
   .sub-features__block--food {

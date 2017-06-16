@@ -42,18 +42,18 @@
     <form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
       <div class="feedback-form__field feedback-form__field--introduction">
         <p class="feedback-form__title">Представьтесь:</p>
-        <label for="first-name" class="feedback-form__label"><span class="feedback-form__label-text">Имя*:</span>
+        <label for="first-name" class="feedback-form__label feedback-form__label--introduction"><span class="feedback-form__label-text">Имя*:</span>
           <input type="text" class="feedback-form__input" id="first-name" name="first-name" >
         </label>
-        <label for="last-name" class="feedback-form__label"><span class="feedback-form__label-text"> Фамилия*:</span>
+        <label for="last-name" class="feedback-form__label feedback-form__label--introduction"><span class="feedback-form__label-text"> Фамилия*:</span>
           <input  type="text" class="feedback-form__input" id="last-name" name="last-name" >
         </label>
-        <label for="middle-name" class="feedback-form__label"><span class="feedback-form__label-text">Отчество:</span>
+        <label for="middle-name" class="feedback-form__label feedback-form__label--introduction"><span class="feedback-form__label-text">Отчество:</span>
           <input type="text" class="feedback-form__input" id="middle-name" name="middle-name">
         </label>
       </div>
       <div class="feedback-form__field feedback-form__field--contacts">
-        <p class="feedback-form__title">Контактная информация:</p>
+        <p class="feedback-form__title feedback-form__title--striped"><span class="feedback-form__title-span"> Контактная информация:</span></p>
         <label for="phone" class="feedback-form__label feedback-form__label--contacts"><span class="feedback-form__label-text"> <span class="feedback-form__desktop-hidden"> Контактный </span> телефон*:</span>
           <span class="feedback-form__input-wrap">
             <input type="phone" class="feedback-form__input" id="phone" name="phone" placeholder="Введите телефон" >
@@ -83,7 +83,7 @@
         </label>
       </div>
       <div class="feedback-form__field feedback-form__field--visited-places">
-        <p class="feedback-form__title">Посещенные достопримечательности:</p>
+        <p class="feedback-form__title feedback-form__title--striped"><span class="feedback-form__title-span">Посещенные достопримечательности: </span></p>
         <label for="devil-bridge" class="feedback-form__label feedback-form__label--visited-places">
           <input type="checkbox" class="feedback-form__input" name="The devil's bridge" id="devil-bridge">
           <span class="feedback-form__checkbox-indicator"></span> Мост Дьявола
@@ -103,12 +103,14 @@
       </div>
       <div class="feedback-form__field feedback-form__field--feedback-text">
         <label for="feedback-message" class="feedback-form__label">
-          <p class="feedback-form__title">Опишите свои эмоции:</p>
+          <p class="feedback-form__title feedback-form__title--striped"><span class="feedback-form__title-span">Опишите свои эмоции:</span></p>
           <textarea name="impression-desc" class="feedback-form__textarea" id="feedback-message" rows="8">Опишите подробно все свои восторги</textarea>
         </label>
       </div>
-      <input type="submit" class="btn btn--send-feedback" value="Отправить отзыв">
-      <div class="feedback-form__required-fields">*-Обязательные поля</div>
+      <div class="feedback-form__footer">
+        <input type="submit" class="btn btn--send-feedback" value="Отправить отзыв">
+        <div class="feedback-form__required-fields">*-Обязательные поля</div>
+      </div>
     </form>
     <footer class="page-footer">
       <p class="page-footer__tag"><a href="#" class="page-footer__link">#visitsedona</a></p>

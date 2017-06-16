@@ -1,9 +1,6 @@
 .feedback-form__field {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   padding:20px;
+  padding-bottom: 0;
   border: none;
 }
 
@@ -12,11 +9,10 @@
   margin: 0;
   margin-bottom: 25px;
   text-align: center;
+  width: 100%;
 }
 
 .feedback-form__label {
-  display: flex;
-  align-self: stretch;
   margin-bottom: 20px;
   align-items: center;
 }
@@ -29,8 +25,6 @@
 .feedback-form__icon {
   display: block;
   position: absolute;
-  top: 1px;
-  right: 1px;
   width: 56px;
   height: 56px;
 }
@@ -46,6 +40,7 @@
 .feedback-form__label-text {
   margin-right: 15px;
   margin-bottom: 15px;
+  display: block;
 }
 
 .feedback-form__label--impression .feedback-form__label-text,
@@ -90,6 +85,7 @@
   background-color: #f2f2f2;
   border:none;
   margin-right: 24px;
+  flex-shrink: 0;
 }
 
 .feedback-form__field--impression .feedback-form__checkbox-indicator {
@@ -136,22 +132,62 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
   left: 23px;
 }
 
+
+
 @media (max-width: 767px) {
   .feedback-form__field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
     border-bottom: 1px solid #e5e5e5;
   }
 
   .feedback-form__field:first-child {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .feedback-form__field--feedback-text {
+    border-bottom: none;
   }
 
   .feedback-form__field:last-child {
-    border: none;
+    border-bottom: none;
+  }
+
+  .feedback-form__label {
+    display: flex;
+    align-self: stretch;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .feedback-form__label--contacts {
+    flex-wrap: wrap;
+  }
+
+  .feedback-form__input-wrap {
+    width: 100%;
+    position: relative;
+  }
+
+  .feedback-form__icon {
+    top: 1px;
+    right: 1px;
   }
 
   .feedback-form__required-fields {
     display: none;
   }
+
+  .feedback-form__field--feedback-text {
+    margin-bottom: 30px;
+
+    & .feedback-form__label {
+      flex-wrap: wrap;
+    }
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -159,50 +195,56 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
   .feedback-form {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 70px;
+    padding: 0 60px;
+    padding-bottom: 65px;
     .container();
+  }
+
+  .feedback-form__field {
+    padding-top: 0;
+/*    margin-bottom: 70px;*/
+  }
+
+  .feedback-form__field--contacts {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .feedback-form__label--contacts {
+    flex-wrap: wrap;
+  }
+
+  .feedback-form__label {
+    display: flex;
+    align-self: stretch;
   }
 
   .feedback-form__field--impression {
     order: -1;
     width: 50%;
     border-right: 1px solid #dadada;
+    padding-left: 0;
+    margin-bottom: 70px;
   }
 
   .feedback-form__field--introduction {
     width: 50%;
     padding-left: 75px;
+    margin-bottom: 70px;
   }
 
-  .feedback-form__field--contacts {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    & .feedback-form__title {
-      width: 100%;
-    }
-
-    & .feedback-form__label {
-      width: 50%;
-    }
-  }
-
-  .feedback-form__label--contacts {
-    padding-right: 75px;
-  }
-
-    .feedback-form__label--contacts:last-child {
-    padding-right: 0;
-  }
 
   .feedback-form__desktop-hidden {
     font-size: 0;
   }
 
   .feedback-form__field--visited-places {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    margin-bottom: 55px;
 
     & .feedback-form__title {
       width: 100%;
@@ -210,12 +252,22 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
   }
 
   .feedback-form__label--visited-places {
-    width: 25%;
+    width: 50%;
   }
 
+  .feedback-form__label--visited-places:nth-child(2n) {
+    padding-left: 15%;
+  }
+
+  .feedback-form__label--visited-places:nth-child(2n-1) {
+    padding-right:15%;
+  }
+
+  /*почему паддинги наоборот срабатывают? паддинг слева должен быть у 1 и 3 элемента, т.е. 2n-1, а получается наоборот....*/
 
   .feedback-form__field--feedback-text {
     width: 100%;
+    margin-bottom: 40px;
   }
 
   .feedback-form__required-fields {
@@ -234,6 +286,46 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
       flex-wrap: wrap;
     }
   }
+
+  .feedback-form__icon {
+    top: 1px;
+    right: 1px;
+  }
+
+  .feedback-form__checkbox-indicator {
+    margin-right: 9%;
+  }
+
+  .feedback-form__title--striped {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .feedback-form__title-span {
+    position: relative;
+    padding: 0 60px;
+    max-width: 400px;
+    flex-shrink: 0;
+  }
+
+  .feedback-form__title--striped::before,
+  .feedback-form__title--striped::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    flex-grow: 1;
+    background-color: #dadada;
+  }
+
+  .feedback-form__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -255,7 +347,19 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
     padding-left: 75px;
   }
 
+  .feedback-form__label {
+    display: flex;
+    align-self: stretch;
+  }
+
+  .feedback-form__label--contacts .feedback-form__label-text {
+    margin-bottom: 0;
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+
   .feedback-form__field--contacts {
+    display: flex;
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -282,6 +386,7 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
   }
 
   .feedback-form__field--visited-places {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
@@ -316,4 +421,42 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
     }
   }
 
+  .feedback-form__icon {
+    top: 1px;
+    right: 1px;
+  }
+
+  .feedback-form__checkbox-indicator {
+    margin-right: 9%;
+  }
+
+  .feedback-form__title--striped {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .feedback-form__title-span {
+    position: relative;
+    padding: 0 60px;
+    max-width: 400px;
+    flex-shrink: 0;
+  }
+
+  .feedback-form__title--striped::before,
+  .feedback-form__title--striped::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    flex-grow: 1;
+    background-color: #dadada;
+  }
+
+    .feedback-form__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
