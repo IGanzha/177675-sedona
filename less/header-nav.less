@@ -22,8 +22,33 @@
   height: 56px;
   font-size: 14px;
   line-height: 40px;
+  font-weight: 700;
   padding: 8px;
   text-align: center;
+}
+
+.header-nav__menu-btn {
+  height: 23px;
+  width: 23px;
+  font-size: 0;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  cursor: pointer;
+
+  & svg {
+    fill:#81b3d2;
+  }
+}
+
+.header-nav__menu-btn:hover svg {
+  fill:#81b3d2;
+}
+
+.header-nav__menu-btn:active svg {
+  fill:#81b3d2;
 }
 
 @media (max-width: 767px) {
@@ -55,6 +80,10 @@
     display: flex;
     margin-left: 50px;
     margin-right: 25px;
+  }
+
+  .header-nav__menu-btn {
+    display: none;
   }
 
   .header-nav__item {
@@ -90,6 +119,10 @@
   .header-nav__list {
     display: flex;
     justify-content: space-around;
+  }
+
+  .header-nav__menu-btn {
+    display: none;
   }
 
   .header-nav__item {

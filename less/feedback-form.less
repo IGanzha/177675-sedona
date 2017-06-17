@@ -56,6 +56,18 @@
   padding: 20px;
 }
 
+.feedback-form__input:hover,
+.feedback-form__textarea:hover {
+  background-color: #e4e4e4;
+}
+
+.feedback-form__input:focus,
+.feedback-form__textarea:focus {
+  background-color: #fff;
+  box-shadow: inset 0 0 0 3px #e4e4e4;
+  outline: none;
+}
+
 .feedback-form__field--contacts .feedback-form__input {
   padding-right: 63px;
 }
@@ -104,7 +116,7 @@ input[type="radio"]:checked + .feedback-form__checkbox-indicator::before {
   border-radius: 50%;
   top: 17px;
   left:17px;
-  background-color: #333333;
+  background-color: #363636;
 }
 
 input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::before,
@@ -132,7 +144,21 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
   left: 23px;
 }
 
+.feedback-form__label--impression:hover .feedback-form__checkbox-indicator,
+.feedback-form__label--visited-places:hover .feedback-form__checkbox-indicator {
+  background-color:#e4e4e4;
+}
 
+.feedback-form__label--impression:active .feedback-form__checkbox-indicator,
+.feedback-form__label--visited-places:active .feedback-form__checkbox-indicator {
+  background-color:#d4d4d4;
+}
+
+input[type="radio"]:checked + .feedback-form__checkbox-indicator:active::before,
+input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::before,
+input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::after  {
+    background-color: #a4a4a4;
+}
 
 @media (max-width: 767px) {
   .feedback-form__field {

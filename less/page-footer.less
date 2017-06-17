@@ -8,19 +8,43 @@
   margin: 0;
 }
 
-.page-footer__link {
+.page-footer__link,
+.page-footer__copyright-link {
   text-decoration: none;
   color: black;
 }
 
-.page-footer__link span {
+.page-footer__link {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.page-footer__copyright-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.page-footer__copyright-link span {
   display: inline-block;
   vertical-align: middle;
   width: 30px;
   height: 35px;
-  background: url("../img/htmlacademy.svg") 0 0 no-repeat;
   font-size: 0;
   color: black;
+
+  & svg {
+    fill:#000;
+  }
+}
+
+.page-footer__copyright-link:hover svg {
+  fill:#90b2d0;
+}
+
+.page-footer__copyright-link:active svg {
+  fill:#b2b2b2;
 }
 
 @media (max-width: 767px){
