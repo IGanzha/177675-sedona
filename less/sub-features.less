@@ -1,9 +1,12 @@
 .sub-features {
-  padding: 40px;
+  padding: 25px 40px 40px 20px;
 }
 
 .sub-features__block {
   position: relative;
+  padding-left: 50px;
+  padding-top: 10px;
+  margin-bottom: 20px;
 }
 
 .sub-features__block:last-child {
@@ -14,6 +17,15 @@
   content: "";
   position: absolute;
   display: block;
+  width: 38px;
+  height: 38px;
+  top: 0px;
+  left: 0px;
+}
+
+.sub-features__block--souvenirs::before {
+  width: 34px;
+  height: 40px;
 }
 
 .sub-features__block--lodging::before {
@@ -34,46 +46,37 @@
 .sub-features__title {
   margin: 0;
   margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .sub-features__desc {
   margin:0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
 }
 
-@media (max-width: 767px) {
 
-  .sub-features__block {
-    margin-left: 30px;
-    margin-bottom: 40px;
-  }
-
-  .sub-features__block::before {
-    width: 38px;
-    height: 38px;
-    top: -10px;
-    left:-50px;
-  }
-
-  .sub-features__block--souvenirs::before {
-    width: 34px;
-    height: 40px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px)  {
   .sub-features {
     display: flex;
-    padding: 165px 45px 65px 45px;
+    padding: 40px 5.9% 65px 5.9%;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .sub-features__block {
-    width: 33%;
+    width: 33.33333333%;
+    padding-left: 0;
+    padding-top: 125px;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
     position: relative;
     text-align: center;
+    margin-bottom: 0;
   }
 
   .sub-features__block::before {
@@ -82,7 +85,7 @@
     display: block;
     width: 76px;
     height: 76px;
-    top: -105px;
+    top: 20px;
     left: 50%;
     margin-left:-38px;
   }
@@ -110,19 +113,22 @@
 
 @media (min-width: 1200px) {
   .sub-features {
-    .container();
     display: flex;
-    padding: 165px 45px 65px 45px;
+    padding: 40px 5.9% 65px 5.9%;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .sub-features__block {
+    width: 260px;
+    padding-left: 0;
+    padding-top: 125px;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
-    width: 33%;
     position: relative;
     text-align: center;
+    margin-bottom: 0;
   }
 
   .sub-features__block::before {
@@ -131,7 +137,7 @@
     display: block;
     width: 76px;
     height: 76px;
-    top: -105px;
+    top: 20px;
     left: 50%;
     margin-left:-38px;
   }

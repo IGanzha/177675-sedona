@@ -5,8 +5,6 @@
 
 }
 
-
-
 .features__img--feat1 {
   background: url("../img/photo-city-mobile@1x.jpg") center center no-repeat;
   background-size: cover;
@@ -18,7 +16,7 @@
 }
 
 .features__content {
-  padding:40px 30px;
+  padding:40px 35px;
 }
 
 .features__title {
@@ -47,22 +45,23 @@
   color: #fff;
 }
 
-@media (max-width: 767px) {
-  .features__img {
-    width: 100%;
-    height: 260px;
-  }
+.features__img {
+  height: 260px;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+.features br {
+  display: none;
+}
+
+@media (min-width: 768px) {
   .features {
     display: flex;
-    height: 257px;
   }
 
   .features__content {
     width: 33%;
     text-align: center;
+    padding: 40px 45px;
   }
 
   .features__img {
@@ -71,15 +70,13 @@
 
 }
 
-
 @media (min-width: 1200px) {
-  .features {
-    display: flex;
-    height: 257px;
-    .container();
+  .features__content {
+    padding: 40px 60px;
   }
 
-  .features__img {
-    width: 67%;
+  .features br {
+    display: inline-block;
   }
+
 }

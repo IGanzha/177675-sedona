@@ -4,8 +4,6 @@
   background-size: cover;
 }
 
-
-
 .welcome-block h1 {
 	font-size: 0;
 }
@@ -16,7 +14,7 @@
 	font-size: 0px;
 }
 
-@media (max-width: 767px) {
+
   .welcome-block {
     padding-top: 90px;
     height:390px;
@@ -43,9 +41,9 @@
     width: 230px;
     margin: 0 auto;
   }
-}
 
-@media (min-width: 768px) and (max-width: 1199px) {
+
+@media (min-width: 768px) {
   .welcome-block {
     padding-top: 75px;
     height: 520px;
@@ -79,6 +77,10 @@
   .welcome-block {
     padding-top: 75px;
     height: 520px;
+  }
+
+  .welcome-block__wrapper {
+    .container();
   }
 
   .welcome-block__p-one {

@@ -1,11 +1,6 @@
 .header-nav {
   margin:0;
   position: relative;
-
-  &__item {
-    padding: 0;
-    margin: 0;
-  }
 }
 
 .header-nav__list {
@@ -17,10 +12,9 @@
 
 .header-nav__link {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
   display: block;
-  height: 56px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 40px;
   font-weight: 700;
   padding: 8px;
@@ -51,35 +45,29 @@
   fill:#81b3d2;
 }
 
-@media (max-width: 767px) {
-
-  .header-nav__list {
-    background-color: #81b3d2;
-  }
-
-  .header-nav__link {
-    min-width: 320px;
-    border-bottom: 1px solid #678fa8;
-    border-top: 1px solid #9ac2db;
-    background-color: #81b3d2;
-  }
-
-  .header-nav__link[href]:hover {
-  background-color: #799dbd;
-  }
-
-  .header-nav__link[href]:active {
-    background-color: #6c95ba;
-    color:#9db6cf;
-  }
-
+.header-nav__list {
+  background-color: #81b3d2;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+.header-nav__link {
+  border-bottom: 1px solid #678fa8;
+  border-top: 1px solid #9ac2db;
+  background-color: #81b3d2;
+}
+
+.header-nav__link[href]:hover {
+  background-color: #799dbd;
+}
+
+.header-nav__link[href]:active {
+  background-color: #6c95ba;
+  color:#9db6cf;
+}
+
+@media (min-width: 768px) {
   .header-nav__list {
     display: flex;
-    margin-left: 50px;
-    margin-right: 25px;
+    background-color: #fff;
   }
 
   .header-nav__menu-btn {
@@ -100,18 +88,26 @@
 
   .header-nav__link {
     color:#000;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    padding: 8px;
+    background-color: #fff;
+    border: none;
   }
 
   .header-nav__link[href]:hover {
     color: #90b1d0;
+    background-color: #fff;
   }
 
   .header-nav__link[href]:active {
     color:#706358;
+    background-color: #fff;
   }
 
-.header-nav__link[href]:active:hover{
-  color:#5c4f45;
+  .header-nav__link[href]:active:hover{
+    color:#5c4f45;
   }
 }
 

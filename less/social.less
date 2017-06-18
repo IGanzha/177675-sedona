@@ -1,12 +1,20 @@
 .social {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
+  margin-bottom:40px;
   padding:0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social__item {
-  display: inline-block;
-  vertical-align: top;
+  margin-right: 6px;
+}
+
+.social__item:last-child {
+  margin-right: 0;
 }
 
 .social__link {
@@ -34,22 +42,16 @@
   }
 }
 
-
-
-@media (max-width: 767px){
-  .social {
-  margin-bottom:40px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px)  {
   .social {
     width: 40%;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: 1200px) {
   .social {
-    width: 40%;
+    width: 33.3333%;
+    margin-bottom: 0;
   }
 }

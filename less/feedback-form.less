@@ -2,6 +2,24 @@
   padding:20px;
   padding-bottom: 0;
   border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+}
+
+.feedback-form__field:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+
+.feedback-form__field--feedback-text {
+  border-bottom: none;
+}
+
+.feedback-form__field:last-child {
+  border-bottom: none;
 }
 
 .feedback-form__title {
@@ -10,11 +28,20 @@
   margin-bottom: 25px;
   text-align: center;
   width: 100%;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .feedback-form__label {
   margin-bottom: 20px;
   align-items: center;
+  display: flex;
+  align-self: stretch;
+}
+
+.feedback-form__label--contacts {
+  flex-wrap: wrap;
 }
 
 .feedback-form__input-wrap {
@@ -43,6 +70,40 @@
   display: block;
 }
 
+.feedback-form__input-wrap {
+  width: 100%;
+  position: relative;
+}
+
+.feedback-form__icon {
+  top: 1px;
+  right: 1px;
+}
+
+.feedback-form__required-fields {
+  display: none;
+}
+
+.feedback-form__label--impression,
+.feedback-form__label--visited-places {
+  text-transform: none;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.feedback-form__places-block {
+  width: 100%;
+}
+
+.feedback-form__field--feedback-text {
+  margin-bottom: 30px;
+
+  & .feedback-form__label {
+    flex-wrap: wrap;
+  }
+}
+
 .feedback-form__label--impression .feedback-form__label-text,
 .feedback-form__label--contacts .feedback-form__label-text {
   margin-left:20px;
@@ -54,6 +115,10 @@
   background-color: #f2f2f2;
   border:none;
   padding: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
 }
 
 .feedback-form__input:hover,
@@ -77,6 +142,10 @@
   background-color: #f2f2f2;
   border:none;
   padding: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
 }
 
 .feedback-form__input[type="radio"],
@@ -154,103 +223,54 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after {
   background-color:#d4d4d4;
 }
 
-input[type="radio"]:checked + .feedback-form__checkbox-indicator:active::before,
-input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::before,
-input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::after  {
+.feedback-form__label--impression:active input[type="radio"]:checked + .feedback-form__checkbox-indicator::before,
+.feedback-form__label--visited-places:active input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::before,
+.feedback-form__label--visited-places:active input[type="checkbox"]:checked + .feedback-form__checkbox-indicator::after  {
     background-color: #a4a4a4;
 }
 
-@media (max-width: 767px) {
-  .feedback-form__field {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 320px;
-    border-bottom: 1px solid #e5e5e5;
-  }
 
-  .feedback-form__field:first-child {
-    border-top: 1px solid #e5e5e5;
-  }
 
-  .feedback-form__field--feedback-text {
-    border-bottom: none;
-  }
 
-  .feedback-form__field:last-child {
-    border-bottom: none;
-  }
-
-  .feedback-form__label {
-    display: flex;
-    align-self: stretch;
-    margin-bottom: 20px;
-    align-items: center;
-  }
-
-  .feedback-form__label--contacts {
-    flex-wrap: wrap;
-  }
-
-  .feedback-form__input-wrap {
-    width: 100%;
-    position: relative;
-  }
-
-  .feedback-form__icon {
-    top: 1px;
-    right: 1px;
-  }
-
-  .feedback-form__required-fields {
-    display: none;
-  }
-
-  .feedback-form__field--feedback-text {
-    margin-bottom: 30px;
-
-    & .feedback-form__label {
-      flex-wrap: wrap;
-    }
-  }
-
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) {
 
   .feedback-form {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 0 60px;
     padding-bottom: 65px;
-    .container();
+    border: none;
   }
 
   .feedback-form__field {
-    padding-top: 0;
-/*    margin-bottom: 70px;*/
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .feedback-form__field:first-child {
+    border-top: none;
   }
 
   .feedback-form__field--contacts {
     flex-direction: column;
     width: 100%;
     margin-bottom: 35px;
-  }
-
-  .feedback-form__label--contacts {
-    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .feedback-form__label {
     display: flex;
     align-self: stretch;
+    margin-bottom: 20px;
   }
 
   .feedback-form__field--impression {
     order: -1;
     width: 50%;
     border-right: 1px solid #dadada;
-    padding-left: 0;
+    padding-right: 20px;
     margin-bottom: 70px;
   }
 
@@ -258,11 +278,6 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::afte
     width: 50%;
     padding-left: 75px;
     margin-bottom: 70px;
-  }
-
-
-  .feedback-form__desktop-hidden {
-    font-size: 0;
   }
 
   .feedback-form__field--visited-places {
@@ -277,17 +292,25 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::afte
     }
   }
 
-  .feedback-form__label--visited-places {
-    width: 50%;
+  .feedback-form__places-block {
+    width: 71%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  .feedback-form__label--visited-places:nth-child(2n) {
+  .feedback-form__label--visited-places {
+    width: 50%;
+    padding: 0;
+  }
+
+/*  .feedback-form__label--visited-places:nth-child(2n) {
     padding-left: 15%;
   }
 
   .feedback-form__label--visited-places:nth-child(2n-1) {
     padding-right:15%;
-  }
+  }*/
 
   /*почему паддинги наоборот срабатывают? паддинг слева должен быть у 1 и 3 элемента, т.е. 2n-1, а получается наоборот....*/
 
@@ -325,12 +348,10 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::afte
   .feedback-form__title--striped {
     display: flex;
     align-items: center;
-    width: 100%;
     flex-wrap: nowrap;
   }
 
   .feedback-form__title-span {
-    position: relative;
     padding: 0 60px;
     max-width: 400px;
     flex-shrink: 0;
@@ -352,6 +373,9 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::afte
     justify-content: space-between;
   }
 
+  .feedback-form__required-fields {
+    display: inline-block;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -359,7 +383,6 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::afte
     display: flex;
     flex-wrap: wrap;
     padding: 0 70px;
-    .container();
   }
 
   .feedback-form__field--impression {
@@ -390,12 +413,9 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::afte
     flex-direction: row;
     flex-wrap: wrap;
 
-    & .feedback-form__title {
-      width: 100%;
-    }
-
     & .feedback-form__label {
       width: 50%;
+      flex-wrap: nowrap;
     }
   }
 
@@ -412,19 +432,29 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::afte
   }
 
   .feedback-form__field--visited-places {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 
-    & .feedback-form__title {
-      width: 100%;
+    & .feedback-form__label--visited-places {
+      flex-wrap: nowrap;
+      max-width: 25%;
+      margin-right: 8%;
+      padding: 0;
+    }
+
+    & .feedback-form__label--visited-places:last-child {
+      margin-right: 0;
     }
   }
 
-  .feedback-form__label--visited-places {
-    width: 25%;
+  .feedback-form__places-block {
+    width: 100%;
+    flex-wrap: nowrap;
+    /*justify-content: space-between;*/
   }
-
 
   .feedback-form__field--feedback-text {
     width: 100%;
@@ -436,10 +466,6 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::afte
   }
 
   .feedback-form__field--feedback-text {
-
-    & .feedback-form__title {
-      width: 100%;
-    }
 
     & .feedback-form__label {
       display: flex;
@@ -459,12 +485,10 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::afte
   .feedback-form__title--striped {
     display: flex;
     align-items: center;
-    width: 100%;
     flex-wrap: nowrap;
   }
 
   .feedback-form__title-span {
-    position: relative;
     padding: 0 60px;
     max-width: 400px;
     flex-shrink: 0;
@@ -475,7 +499,6 @@ input[type="checkbox"]:checked + .feedback-form__checkbox-indicator:active::afte
     content: "";
     display: block;
     height: 1px;
-    width: 100%;
     flex-grow: 1;
     background-color: #dadada;
   }
