@@ -1,0 +1,48 @@
+.btn {
+  display: block;
+  text-decoration: none;
+  padding: 17px;
+  margin: 0 auto;
+  background-color: #81b3d2;
+
+  color:#fff;
+  max-width: 280px;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: #799cbd;
+}
+
+.btn:active {
+  background-color: #6c94ba;
+  color:#a0b8d0;
+}
+
+.btn:disabled {
+  background-color: #e4e4e4;
+  color:#fff;
+}
+
+.btn--send-feedback {
+  text-transform: uppercase;
+  border:none;
+  margin: 0 auto;
+  padding: 17px 35px;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    max-width: none;
+  }
+
+  .btn--find-hotel {
+    width: 457px;
+  }
+  .btn--send-feedback {
+    margin-left: 20px;
+  }
+}

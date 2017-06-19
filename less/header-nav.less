@@ -1,15 +1,9 @@
 .header-nav {
   margin:0;
-
-  &__item {
-    padding: 0;
-    margin: 0;
-  }
+  position: relative;
 }
 
-
 .header-nav__list {
-  background-color: #81b3d2;
   color: #fff;
   list-style: none;
   padding: 0;
@@ -18,15 +12,46 @@
 
 .header-nav__link {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
   display: block;
-  min-width: 320px;
-  height: 56px;
-  border-bottom: 1px solid #678fa8;
   font-size: 18px;
   line-height: 40px;
+  font-weight: 700;
   padding: 8px;
   text-align: center;
+}
+
+.header-nav__menu-btn {
+  height: 23px;
+  width: 23px;
+  font-size: 0;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  cursor: pointer;
+
+  & svg {
+    fill:#81b3d2;
+  }
+}
+
+.header-nav__menu-btn:hover svg {
+  fill:#81b3d2;
+}
+
+.header-nav__menu-btn:active svg {
+  fill:#81b3d2;
+}
+
+.header-nav__list {
+  background-color: #81b3d2;
+}
+
+.header-nav__link {
+  border-bottom: 1px solid #678fa8;
+  border-top: 1px solid #9ac2db;
   background-color: #81b3d2;
 }
 
@@ -34,8 +59,90 @@
   background-color: #799dbd;
 }
 
-
 .header-nav__link[href]:active {
   background-color: #6c95ba;
   color:#9db6cf;
 }
+
+@media (min-width: 768px) {
+  .header-nav__list {
+    display: flex;
+    background-color: #fff;
+  }
+
+  .header-nav__menu-btn {
+    display: none;
+  }
+
+  .header-nav__item {
+    width: 20%;
+  }
+
+  .header-nav__item:nth-child(2) {
+    margin-right: auto;
+  }
+
+  .header-nav__item:nth-child(3) {
+    margin-left: auto;
+  }
+
+  .header-nav__link {
+    color:#000;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    padding: 8px;
+    background-color: #fff;
+    border: none;
+  }
+
+  .header-nav__link[href]:hover {
+    color: #90b1d0;
+    background-color: #fff;
+  }
+
+  .header-nav__link[href]:active {
+    color:#706358;
+    background-color: #fff;
+  }
+
+  .header-nav__link[href]:active:hover{
+    color:#5c4f45;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-nav__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .header-nav__menu-btn {
+    display: none;
+  }
+
+  .header-nav__item {
+    width: 20%;
+  }
+
+  .header-nav__item:nth-child(2) {
+    margin-right: auto;
+  }
+
+  .header-nav__link {
+    color:#000;
+  }
+
+  .header-nav__link[href]:hover {
+    color: #90b1d0;
+  }
+
+  .header-nav__link[href]:active {
+    color:#706358;
+  }
+
+  .header-nav__link[href]:active:hover{
+  color:#5c4f45;
+  }
+}
+
