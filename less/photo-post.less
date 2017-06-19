@@ -11,12 +11,8 @@
   }
 }
 
-.photo-post:first-child {
-  border-top: 1px solid #e5e5e5;
-}
-
 .photo-post__img {
-  width: 100%; /*здесь картинка должна тянуться на ширину блока? некрасиво растягивается*/
+  width: 100%;
 }
 
 .photo-post__img-link,
@@ -36,7 +32,6 @@
 }
 
 .photo-post__btn-like {
-  padding: 0;
   border: none;
   background: none;
   cursor: pointer;
@@ -104,7 +99,7 @@
   }
 
   .photo-post__img {
-    width: 100%;   /*Почему ссылка photo-post__img-link вылазием снизу изображения на 3 пикселя? как убрать?*/
+    width: 100%;
   }
 
   .photo-post__btn-like {
@@ -155,5 +150,93 @@
   .photo-post__btn-like {
     color:#fff;
   }
+}
 
+@media (max-width: 767px) {
+  .photo-post {
+    min-width: 320px;
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .photo-post:first-child {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .photo-post__img {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .photo-post {
+    width: 50%;
+  }
+
+  .photo-post:nth-child(2n-1) {
+    background-color: #f2f2f2;
+  }
+
+  .photo-post:first-child {
+    width: 100%;
+  }
+
+  .photo-post__img {
+    width: 100%;
+  }
+
+  .photo-post__content {
+    padding-left: 20px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .photo-post__title-block {
+    width: 80%;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+  .photo-post {
+    position: relative;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .photo-post:first-child {
+    width: 100%;
+  }
+
+  .photo-post__img {
+    width: 100%;
+  }
+
+  .photo-post__content {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+  }
+
+  .photo-post__title-link,
+  .photo-post__author-link {
+    color: #fff;
+  }
+
+  .photo-post__title-block {
+    width: 80%;
+  }
+
+  .photo-post__btn-like {
+    color:#fff;
+  }
 }
