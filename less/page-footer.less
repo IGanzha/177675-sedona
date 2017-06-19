@@ -1,51 +1,82 @@
 .page-footer {
   text-align: center;
-  padding-top: 40px;
-  .container();
+  padding-top: 38px;
+  padding-bottom: 22px;
 }
 
 .page-footer__tag {
   margin: 0;
+  margin-bottom: 38px;
 }
 
-.page-footer__link {
+.page-footer__link,
+.page-footer__copyright-link {
   text-decoration: none;
   color: black;
 }
 
-.page-footer__link span {
+.page-footer__link {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.page-footer__copyright-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.page-footer__copyright-link span {
   display: inline-block;
   vertical-align: middle;
   width: 30px;
   height: 35px;
-  background: url("../img/htmlacademy.svg") 0 0 no-repeat;
   font-size: 0;
   color: black;
-}
 
-@media (max-width: 767px){
-  .page-footer__tag {
-  margin: 0;
-  margin-bottom: 40px;
+  & svg {
+    fill:#000;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+.page-footer__copyright-link:hover svg {
+  fill:#90b2d0;
+}
+
+.page-footer__copyright-link:active svg {
+  fill:#b2b2b2;
+}
+
+
+@media (min-width: 768px) {
   .page-footer{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 40px 60px 25px 60px;
+    padding: 35px 60px;
   }
+
+  .page-footer__tag {
+    width: 30%;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .page-footer__copyright{
+    width: 30%;
+    text-align: right;
+  }
+
 }
 
 @media (min-width: 1200px) {
-  .page-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 120px;
-    padding-right: 40px;
-    padding-bottom: 40px;
+  .page-footer__tag {
+    width: 33.33333%;
+    text-align: center;
+  }
+
+  .page-footer__copyright{
+    width: 33.3333%;
+    text-align: right;
   }
 }
