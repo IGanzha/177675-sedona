@@ -9,9 +9,21 @@
   background-size: cover;
 }
 
+@media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  .features__img--feat1 {
+    background: url("../img/photo-city-mobile@2x.jpg") center center no-repeat;
+  }
+}
+
 .features__img--feat2 {
   background: url("../img/photo-bridge-mobile@1x.jpg") center center no-repeat;
   background-size: cover;
+}
+
+@media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  .features__img--feat2 {
+    background: url("../img/photo-bridge-mobile@2x.jpg") center center no-repeat;
+  }
 }
 
 .features__content {
@@ -45,7 +57,8 @@
 }
 
 .features__img {
-  height: 260px;
+  min-height: 260px;
+  width: 100%;
 }
 
 .features br {
@@ -55,23 +68,76 @@
 @media (min-width: 768px) {
   .features {
     display: flex;
+    align-items: stretch;
+  }
+
+  .features__img--feat1 {
+    background: url("../img/photo-city-tablet@1x.jpg") center center no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    .features__img--feat1 {
+      background: url("../img/photo-city-tablet@2x.jpg") center center no-repeat;
+    }
+  }
+
+  .features__img--feat2 {
+    background: url("../img/photo-bridge-tablet@1x.jpg") center center no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    .features__img--feat2 {
+      background: url("../img/photo-bridge-tablet@2x.jpg") center center no-repeat;
+    }
   }
 
   .features__content {
     width: 33%;
     text-align: center;
-    padding: 40px 45px;
+    padding: 50px 45px;
+  }
+
+  .feaures__title {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
   }
 
   .features__img {
     width: 67%;
+    height: auto;
   }
 
 }
 
 @media (min-width: 1200px) {
+
+  .features__img--feat1 {
+    background: url("../img/photo-city@1x.jpg") center center no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    .features__img--feat1 {
+      background: url("../img/photo-city@2x.jpg") center center no-repeat;
+    }
+  }
+
+  .features__img--feat2 {
+    background: url("../img/photo-bridge@1x.jpg") center center no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    .features__img--feat2 {
+      background: url("../img/photo-bridge@2x.jpg") center center no-repeat;
+    }
+  }
+
   .features__content {
-    padding: 40px 60px;
+    padding: 55px 65px 65px;
   }
 
   .features br {

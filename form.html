@@ -38,7 +38,11 @@
         </nav>
         <div class="page-header__logo-block">
           <a class="page-header__logo-link" href="index.html">
-            <img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Sedona-logo" width="102" height="83">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="page-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Sedona-logo" width="102" height="83">
+            </picture>
           </a>
         </div>
       </header>
@@ -47,7 +51,7 @@
           <h1>Sedona</h1>
         </div>
       </section>
-      <section class="content-block content-block--figured content-block--feedback">
+      <section class="content-block content-block--feedback">
         <div class="content-block__wrapper">
           <p class="content-block__title">Оставьте свой отзыв </p>
           <p class="content-block__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях </p>
