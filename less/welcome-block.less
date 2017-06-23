@@ -2,6 +2,18 @@
   width: 100%;
   background: url("../img/bg-back-mobile@1x.jpg") center center no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.welcome-block::after {
+  content:"";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 57px;
+  background: url("../img/bg-intro-triangle-mobile.svg") center center no-repeat;
+  background-size: cover;
 }
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
@@ -64,6 +76,11 @@
     }
   }
 
+  .welcome-block::after {
+    background: url("../img/bg-intro-triangle-tablet.svg") center center no-repeat;
+    min-height: 57px;
+  }
+
   .welcome-block__p-one {
     margin: 0 auto;
     font-size: 0;
@@ -98,6 +115,10 @@
     .welcome-block {
       background: url("../img/bg-back-desktop@2x.jpg") center center no-repeat;
     }
+  }
+
+  .welcome-block::after {
+    background: url("../img/bg-intro-triangle-desktop.svg") center center no-repeat;
   }
 
   .welcome-block__p-one {

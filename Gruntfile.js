@@ -1,10 +1,7 @@
 "use strict";
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks("grunt-contrib-less");
-  grunt.loadNpmTasks("grunt-browser-sync");
-  grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-postcss");
+  require("load-grunt-tasks")(grunt)
 
   grunt.initConfig({
     less: {
@@ -21,10 +18,57 @@ module.exports = function(grunt) {
           processors: [
             require("autoprefixer")({browsers: [
               "last 2 versions"
-            ]})
+            ]}),
+            require("css-mqpacker")({
+              sort:true
+            })
           ]
         },
         src: "css/*.css"
+      }
+    },
+
+    csso: {
+      style: {
+        options: {
+          report: "gzip"
+        },
+        files: {
+          "css/style.min.css": ["css/style.css"]
+        }
+      }
+    },
+
+    imagemin: {
+      images: {
+        optimizationLevel: 3,
+        progressive: true
+      },
+      files: [{
+        expand: true,
+        src: ["img/**/*.{png,jpg,gif}"]
+      }]
+    },
+
+    svgstore: {
+      options: {
+        svg: {
+          style: "display:none"
+        }
+      },
+      symbols: {
+        files: {
+          "img/symbols.svg": ["img/icons/*.svg"]
+        }
+      }
+    },
+
+    svgmin: {
+      symbols: {
+        files: [{
+          expand: true,
+          src: ["img/icons/*.svg"]
+        }]
       }
     },
 
@@ -56,4 +100,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
+  grunt.registerTask("build", ["less","postcss", "csso", "symbols", "imagemin"]);
 };
