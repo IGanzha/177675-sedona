@@ -74,30 +74,6 @@ module.exports = function(grunt) {
       }
     },
 
-    csso: {
-      style: {
-        options: {
-          report: "gzip"
-        },
-        files: {
-          "css/style.min.css": ["css/style.css"]
-        }
-      }
-    },
-
-    imagemin: {
-      images: {
-        options: {
-          optimizationLevel: 3,
-          progressive: true
-        },
-        files: [{
-          expand:true,
-          src:["img/**/*.{png,jpg,gif"]
-        }]
-      }
-    },
-
     browserSync: {
       server: {
         bsFiles: {
