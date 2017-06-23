@@ -3,6 +3,11 @@
   text-align: center;
 }
 
+.page-header__logo-block {
+  position: relative;
+  z-index: 3;
+}
+
 .page-header__logo-link {
   display: inline-block;
   vertical-align: middle;
@@ -12,6 +17,7 @@
 @media (min-width: 768px)  {
   .page-header__logo-block {
     position: absolute;
+    z-index: 3;
     top: 0;
     left: 50%;
     margin-left: -51px;
@@ -20,13 +26,11 @@
 
 @media (min-width: 1200px) {
 .page-header__logo-block {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -51px;
+    margin-left: -93px;
   }
 
+  .page-header__logo-img {
+    width: 186.643px;
+    height: 96.425px;
+  }
 }
-
-
-
