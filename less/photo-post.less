@@ -1,5 +1,5 @@
 .photo-post {
-  min-width: 320px;
+  /*min-width: 320px;*/
   padding: 20px;
   border-bottom: 1px solid #e5e5e5;
   margin: 0 auto;
@@ -11,6 +11,13 @@
   }
 }
 
+.photo-post__img-link {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
 .photo-post__img {
   width: 100%;
 }
@@ -20,11 +27,6 @@
 .photo-post__author-link {
   text-decoration: none;
   color:black;
-}
-
-.photo-post__img-link {
-  display: block;
-  width: 100%;
 }
 
 .photo-post__author {
@@ -70,8 +72,13 @@
     width: 100%;
   }
 
+  .photo-post__img-link {
+    max-width: none;
+  }
+
   .photo-post__img {
     width: 100%;
+    max-width: none;
   }
 
   .photo-post__content {
@@ -120,7 +127,6 @@
     padding: 18px 20px;
   }
 
-
   .photo-post__title-block {
     width: 80%;
   }
@@ -145,98 +151,8 @@
     color: #fff;
   }
 
-
-
   .photo-post__btn-like {
     color:#fff;
   }
 }
 
-@media (max-width: 767px) {
-  .photo-post {
-    min-width: 320px;
-    padding: 20px;
-    border-bottom: 1px solid #e5e5e5;
-  }
-
-  .photo-post:first-child {
-    border-top: 1px solid #e5e5e5;
-  }
-
-  .photo-post__img {
-    width: 100%;
-  }
-}
-
-
-@media (min-width: 768px) and (max-width: 1199px) {
-  .photo-post {
-    width: 50%;
-  }
-
-  .photo-post:nth-child(2n-1) {
-    background-color: #f2f2f2;
-  }
-
-  .photo-post:first-child {
-    width: 100%;
-  }
-
-  .photo-post__img {
-    width: 100%;
-  }
-
-  .photo-post__content {
-    padding-left: 20px;
-    padding-right: 30px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .photo-post__title-block {
-    width: 80%;
-  }
-
-}
-
-
-@media (min-width: 1200px) {
-  .photo-post {
-    position: relative;
-    margin: 0;
-    flex-grow: 1;
-  }
-
-  .photo-post:first-child {
-    width: 100%;
-  }
-
-  .photo-post__img {
-    width: 100%;
-  }
-
-  .photo-post__content {
-    position: absolute;
-    bottom: 0;
-    color: #fff;
-    padding-left: 20px;
-    padding-right: 30px;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(0,0,0,0.5);
-    width: 100%;
-  }
-
-  .photo-post__title-link,
-  .photo-post__author-link {
-    color: #fff;
-  }
-
-  .photo-post__title-block {
-    width: 80%;
-  }
-
-  .photo-post__btn-like {
-    color:#fff;
-  }
-}
