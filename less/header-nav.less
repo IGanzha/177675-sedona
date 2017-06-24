@@ -18,7 +18,7 @@
   font-size: 18px;
   line-height: 40px;
   font-weight: 700;
-  padding: 8px;
+  padding: 7px;
   text-align: center;
   border-bottom: 1px solid #678fa8;
   border-top: 1px solid #9ac2db;
@@ -41,21 +41,60 @@
   background: none;
   border: none;
   position: absolute;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
   top: 17px;
   right: 20px;
-  cursor: pointer;
 
-  & svg {
+  & .icon-menu {
     fill:#81b3d2;
+  }
+
+  & .icon-cross {
+    fill: #fff;
   }
 }
 
-.header-nav__menu-btn:hover svg {
-  fill:#81b3d2;
+.icon-menu {
+  display: none;
 }
 
-.header-nav__menu-btn:active svg {
+@media(max-width: 767px){
+  .header-nav__menu-btn--closed {
+    & .icon-menu {
+      display: block;
+    }
+
+    & .icon-cross {
+      display: none;
+    }
+  }
+
+  .header-nav__menu-btn--closed + .header-nav__list {
+    display: none;
+  }
+}
+
+.header-nav__menu-btn:hover {
+  & .icon-menu {
   fill:#81b3d2;
+  }
+
+  & .icon-cross {
+    fill:#fff;
+  }
+}
+
+.header-nav__menu-btn:active {
+
+  & .icon-menu {
+    fill:#81b3d2;
+  }
+
+  & .icon-cross {
+    fill:#fff;
+  }
 }
 
 @media (min-width: 768px) {

@@ -29,7 +29,7 @@ form.addEventListener("submit", function(event) {
 popup_close.addEventListener("click", function(event) {
   event.preventDefault();
   if (popup_failure.classList.contains("show-popup")) {
-    popup_failure.classList.remove("show-popup"); // почему не закрывается провальный попап?
+    popup_failure.classList.remove("show-popup");
     console.log("класс show-popup удален у провального попапа");
   } else {
     popup_success.classList.remove("show-popup");
