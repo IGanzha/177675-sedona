@@ -6,7 +6,7 @@
   position: relative;
   padding-left: 50px;
   padding-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .sub-features__block:last-child {
@@ -29,7 +29,7 @@
 }
 
 .sub-features__block--lodging::before {
-  background: url("../img/icon-house.svg") center center no-repeat;
+  background: url("../img/icon-house.svg") center top no-repeat;
   background-size: cover;
 }
 
@@ -45,7 +45,7 @@
 
 .sub-features__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -56,20 +56,24 @@
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+
+  br {
+    display: none;
+  }
 }
 
 
 @media (min-width: 768px)  {
   .sub-features {
     display: flex;
-    padding: 40px 0 65px;
+    padding: 40px 0 60px;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
   .sub-features__block {
     width: 33.33333333%;
-    padding: 125px 45px 0;
+    padding: 115px 45px 0;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -83,7 +87,7 @@
     position: absolute;
     display: block;
     width: 76px;
-    height: 76px;
+    height: 66px;
     top: 20px;
     left: 50%;
     margin-left:-38px;
@@ -96,15 +100,36 @@
   .sub-features__block--souvenirs::before {
     width: 66px;
     height: 76px;
+    top: 15px;
   }
 
   .sub-features__title {
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
+    margin-bottom: 20px;
   }
 }
 
 @media (min-width: 1200px) {
+
+  .sub-features {
+    padding: 40px 0 80px;
+  }
+
+  .sub-features__block--food {
+    .sub-features__desc {
+      max-width: 290px;
+      margin: 0 auto;
+    }
+  }
+
+  .sub-features__block--souvenirs {
+    .sub-features__desc {
+      br {
+        display: inline-block;
+      }
+    }
+  }
 
 }

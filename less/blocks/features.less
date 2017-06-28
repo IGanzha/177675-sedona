@@ -1,5 +1,4 @@
 .features {
-/*  background-color: #81b3d2;*/
   text-align: center;
   padding: 0;
 }
@@ -12,7 +11,7 @@
 }
 
 .features__img--feat1 {
-  background: url("../img/photo-city-mobile@1x.jpg") center center no-repeat;
+  background: #adb9a7 url("../img/photo-city-mobile@1x.jpg") center center no-repeat;
   background-size: 100% 260px;
 }
 
@@ -26,8 +25,8 @@
 }
 
 .features__img--feat2 {
-  background: url("../img/photo-bridge-mobile@1x.jpg") center center no-repeat;
-  background-size: cover;
+  background: #e3b39e url("../img/photo-bridge-mobile@1x.jpg") center center no-repeat;
+  background-size: 100% 260px;
 }
 
 @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
@@ -39,13 +38,17 @@
 }
 
 .features__content {
-  padding:40px 35px;
+  padding:35px 25px 40px;
   background-color: #81b3d2;
+
+  &--true-city {
+    padding:55px 25px 40px;
+  }
 }
 
 .features__title {
   margin:0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -54,7 +57,7 @@
 
 .features__number {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 300;
@@ -115,17 +118,34 @@
   .features__content {
     width: 33%;
     text-align: center;
-    padding: 50px 45px;
+    padding: 45px 45px;
+
+    .features__title {
+      font-size: 21px;
+      line-height: 26px;
+      font-weight: 700;
+    }
+
+    .features__number {
+      margin-bottom: 20px;
+    }
+
+    .features__br-title {
+     display: inline-block;
+    }
   }
 
-  .feaures__title {
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: 700;
+  .features--reverse-order {
+    .features__content {
+      order: 2;
+    }
+
+    .features__desc {
+      br {
+        display: none;
+      }
+    }
   }
-
-
-
 }
 
 @media (min-width: 1200px) {
@@ -153,10 +173,18 @@
   }
 
   .features__content {
-    padding: 55px 65px 65px;
+    padding: 50px 65px 65px;
   }
 
-  .features br {
-    display: inline-block;
+  .features--reverse-order {
+    .features__content {
+      padding: 55px 65px 60px;
+    }
+
+    .features__desc {
+      br {
+        display: block;
+      }
+    }
   }
 }
